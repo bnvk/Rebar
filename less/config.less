@@ -1,0 +1,241 @@
+/* Colors */
+
+	@blueDarkest: #005283;
+	@blueDarker: #3d6088;
+	@blueDark: #006daf;
+	@blue: #41c2ff;
+	@blueLight: #99d9ff;
+	@grayLight: #92a3bf;
+	@gray: #8596b3;
+	@grayDark: #7f90ac;
+	@red: #C94D35;
+	@redBorder: #713c2a;
+	@orange: #9e6727;
+	@brown: #826f69;
+	@greenDark: #7ba2a7;
+	@green: #abc78a;	
+	@greenLight: #e2e8e3;
+	@greenLightBorder: #b0b1b2;
+	@white: #FFFFFF;
+
+
+/* Margins, Paddings, and Spacings */
+
+	@base-line-height: 20px;
+	@base-margin: 20px;
+	@base-margin-bottom: @base-margin * 1.5;
+	@base-padding: 20px;
+	@base-border-radius: 4px;
+
+
+/* Body */
+
+	@body-background-color: #ffffff;
+	@body-background-image: ~'';
+	@body-background-repeat: ~'';
+	@body-background-position: ~'';
+
+
+/* Text */
+
+	@text-font-size: 18px;
+	@text-font-weight: normal;
+	@text-font-family: AvenirNextLTPro-Regular, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	@text-font-family-italic: AvenirNextLTPro-It, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	@text-font-family-bold: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	@text-line-height: 24px;
+	@text-color: #333333;
+	@text-color-light: #999999;
+
+	@em-font-style: @text-font-family-italic;
+
+	@strong-font-family:  AvenirNextLTPro-Bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	@strong-font-weight: normal;
+	@strong-color: #333;
+
+	@text-shadow-on-light: 1px 1px 1px #888888;
+	@text-shadow-on-dark: 0 -1px 0 rgba(0, 0, 0, 0.4);
+
+/* Links */
+	
+	@link-font-size: 18px;
+	@link-font-wieght: bold;
+	@link-color: #006daf;
+	@link-color-hover: @blueDarkest;
+	@link-decoration: none;
+	@link-decoration-hover: underline;
+	
+
+/* Headings */
+
+	@headings-color: #333333;
+	@headings-font-family: @text-font-family-bold;
+	@headings-font-weight: normal;
+	@headings-letter-spacing: 0;
+	@headings-size-h1: 60px;
+	@headings-size-h2: 48px;
+	@headings-size-h3: 36px;
+	@headings-size-h4: 30px;
+	@headings-size-h5: 24px;
+	@headings-size-h6: 18px;
+
+
+/* Navigation */
+
+	@navigation-background: #222222;
+	@navigation-text: #EEEEEE;
+	@navigation-text-hover: #AAAAAA;
+	@navigation-text-dark: #818181;
+	@navigation-elements: #AAAAAA;
+	@navigation-shadows: #EEEEEE;
+	
+	@navigation-sub-background: #d9d9d9;
+	@navigation-sub-text: #EEEEEE;
+	@navigation-sub-text-hover: #AAAAAA;
+	@navigation-sub-text-dark: #818181;
+	@navigation-sub-elements: #AAAAAA;
+	@navigation-sub-shadows: #EEEEEE;
+
+
+/* Lists */
+
+	@list-margin: ~'';
+	@list-padding: ~'';
+	@list-item-margin: ~'';
+	@list-item-padding: ~'';
+	@list-item-type: ~'';
+
+
+/* Elements */
+
+	@blockquote-font-size: 18px;
+	@blockquote-font-style: italic;
+	@blockquote-line-height: 24px;
+	@blockquote-color: #666666;
+	
+	@hr-border-type: solid;
+	@hr-border-color: @greenLightBorder;
+	@hr-border-width: 1px 0 0;
+	@hr-border-margin: 0px;
+	
+
+/* Buttons */
+
+	.button-globals(@color: #eeeeee, @shadow: 1px 1px 1px #333333) {
+
+		// Font
+		color: @color !important;
+		font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;	
+		font-size: 16px;
+		font-weight: normal !important;
+		line-height: normal;
+		text-shadow: @shadow; 		
+		text-decoration: none;
+
+		// Display
+		padding: 5px 15px;
+		display: inline-block;
+		cursor: pointer;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+		// Select
+	    -webkit-user-select:none;
+	    -moz-user-select:none;
+	    -ms-user-select:none;
+	    user-select:none;
+	    
+	    // Animate
+	    -webkit-transition-duration: 0.2s;
+	    -moz-transition-duration: 0.2s;
+	    transition-duration: 0.2s;	    
+	}
+
+	.button-border(@border-color) {
+
+		border: 1px solid @border-color, ;
+		border-top: 1px solid (@border-color + #222222);
+		border-left: 1px solid (@border-color + #222222);
+
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+	}
+
+	.button-background(@color-top: #666666, @color-bottom: #333333) {
+
+	    background: @color-top;
+	    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	}
+
+	@button-primary-top: @blueDark;
+	@button-primary-top-hover: darken(@button-primary-top, 12%);
+	@button-primary-bottom: @blueDarkest;
+	@button-primary-bottom-hover: darken(@button-primary-bottom, 12%);
+	@button-primary-color: @white;
+	@button-primary-shadow: @text-shadow-on-dark;
+	@button-primary-border: @blueDarkest;
+	@button-primary-border-hover: @blueDarkest;
+	
+	@button-secondary-top: @greenDark;
+	@button-secondary-top-hover: darken(@button-secondary-top, 20%);
+	@button-secondary-bottom: @greenDark;
+	@button-secondary-bottom-hover: darken(@button-secondary-bottom, 20%);
+	@button-secondary-color: @white;
+	@button-secondary-shadow: @text-shadow-on-dark;
+	@button-secondary-border: #7ba2a7;
+	@button-secondary-border-hover: @blueDarkest;
+
+	@button-alert-top: @brown;
+	@button-alert-top-hover: darken(@button-alert-top, 20%);
+	@button-alert-bottom: @brown;
+	@button-alert-bottom-hover: darken(@button-alert-bottom, 20%);
+	@button-alert-color: @white;
+	@button-alert-shadow: @text-shadow-on-dark;
+	@button-alert-border: #8596b3;
+	@button-alert-border-hover: @blueDarkest;
+
+	@button-warning-top: @red;
+	@button-warning-top-hover: darken(@button-warning-top, 20%);
+	@button-warning-bottom: @red;
+	@button-warning-bottom-hover: darken(@button-warning-bottom, 20%);
+	@button-warning-color: @white;
+	@button-warning-shadow: @text-shadow-on-dark;
+	@button-warning-border: #713c2a;
+	@button-warning-border-hover: @blueDarkest;
+
+
+/* Forms */
+
+	@form-elements-background: #FFFFFF;
+	@form-elements-color: #666666;
+	@form-elements-color-focus: #333333;
+	@form-elements-font-size: 18px;
+	@form-elements-font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	@form-border-size: 1px;
+	@form-border-color: #999999;
+	@form-border-radius: 4px;
+	@form-border-color-focus: #666666;
+
+	@form-select-color: @blueDarker;
+	@form-label-color: @blueDarker;
+
+
+/* Tables */
+
+	@table-background-color: @greenLight;
+	@table-background-color-striped: #FEFEFE;
+
+	@table-margins: @base-line-height;	
+	@table-padding: 15px;
+	
+	@table-border: 1px solid @greenLightBorder;
+	@table-border-radius: 5px;
+
+	@table-td-border-top: 1px solid @greenLightBorder;
+	@table-line-height: 18px;
+

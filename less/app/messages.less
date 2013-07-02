@@ -1,0 +1,45 @@
+/* Messages - Error, Warning, Debug, Info, Success */
+
+	#messages div {
+		margin: 0px;
+		padding: 10px 10px 10px 20px;
+		list-style: none;
+		font-family: 'AvenirNextLTPro-Demi';
+		text-shadow: @text-shadow-on-dark;
+		color: @white;
+		border-bottom: 1px solid @greenLightBorder;
+		background-color: @greenLightBorder;
+	}
+
+	#messages span.message-text {
+		width: 90%;
+		padding-top: 3px;
+		display: block;
+		float: left;
+		text-align: left;
+	}
+
+	#messages abbr.message-close {
+		cursor: pointer;
+		float: right;
+		display: block;
+		background: @greenLight;
+		color: @text-color;
+		box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.6);
+		padding: 2px 10px;
+		font-size: 12px;
+		border-radius: 4px;
+	}
+	
+	#messages abbr.message-close:hover {
+		background: @greenLightBorder;
+		box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.6);		
+	}
+
+	#messages .error   { background-color: @red; }
+	#messages .warning { background-color: @brown; }
+	#messages .debug   { background-color: @greenDark; }
+	#messages .info    { background-color: @blueDarker; }
+	#messages .success { background-color: @green; }
+	
+	
