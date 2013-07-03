@@ -40,21 +40,23 @@
 
 	@text-font-size: 18px;
 	@text-font-weight: normal;
-	@text-font-family: AvenirNextLTPro-Regular, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	@text-font-family-italic: AvenirNextLTPro-It, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	@text-font-family-bold: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	@text-font-family: OpenSans-Regular, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	@text-font-family-italic: OpenSans-Italic, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	@text-font-family-semibold: OpenSans-Semibold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	@text-font-family-bold: OpenSans-Bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	@text-line-height: 24px;
 	@text-color: #333333;
 	@text-color-light: #999999;
 
 	@em-font-style: @text-font-family-italic;
 
-	@strong-font-family:  AvenirNextLTPro-Bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	@strong-font-family: OpenSans-Bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	@strong-font-weight: normal;
 	@strong-color: #333;
 
 	@text-shadow-on-light: 1px 1px 1px #888888;
 	@text-shadow-on-dark: 0 -1px 0 rgba(0, 0, 0, 0.4);
+
 
 /* Links */
 	
@@ -71,7 +73,7 @@
 	@headings-color: #333333;
 	@headings-font-family: @text-font-family-bold;
 	@headings-font-weight: normal;
-	@headings-letter-spacing: 0;
+	@headings-letter-spacing: -2px;
 	@headings-size-h1: 60px;
 	@headings-size-h2: 48px;
 	@headings-size-h3: 36px;
@@ -125,7 +127,7 @@
 
 		// Font
 		color: @color !important;
-		font-family: AvenirNextLTPro-Demi, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;	
+		font-family: @text-font-family-semibold !important;	
 		font-size: 16px;
 		font-weight: normal !important;
 		line-height: normal;

@@ -32,8 +32,9 @@ This is where the magic happens. Inspired by the Customize & Theme Generator for
 
 * **css/**
 	* app.css
+	* guide.css
 
-This is where your application css files live
+This is where your application css files live. 
 
 * **less/app/** 
 	* backgrounds.less
@@ -58,7 +59,8 @@ This file is your basic app template where you choose which mixins you want to i
 	* buttons.less
 	* forms.less
 	* tables.less
-	* skeleton.less
+	* responsive-grid.less
+	* responsive-boxes.less
 
 The **less/base/** folder contains Rebar specific LESS templates. If your app does not have tables leave out **tables.less** 
 
