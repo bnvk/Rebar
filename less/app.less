@@ -3,27 +3,37 @@
  */
 
 
-/* Global */
-@import "app/fonts.less";
+/* Global 
+	- Must be included before the config file incase you want specify custom fonts or backgrounds
+*/
+@import "app/webfonts.less";
 @import "app/icons.less";
 @import "app/backgrounds.less";
 
-/* Config */
+
+/* Config 
+	- Change the settings in this file change the look and feel of your style
+*/
 @import "config.less";
 
-/* Base */
+
+/* Rebar 
+	- These files reset and style all the basic HTML elements
+	- Also provides responsive Grid & Boxes
+*/
 @import "rebar/base.less";
 @import "rebar/links.less";
 @import "rebar/typography.less";
 @import "rebar/navigation.less";
 @import "rebar/lists.less";
-@import "rebar/elements.less";
+@import "rebar/separators.less";
 @import "rebar/images.less";
 @import "rebar/buttons.less";
 @import "rebar/forms.less";
 @import "rebar/tables.less";
 @import "rebar/responsive-grid.less";
 @import "rebar/responsive-boxes.less";
+
 
 /* Mixins */
 @import "mixins/animate.less";

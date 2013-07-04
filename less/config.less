@@ -1,22 +1,16 @@
 /* Colors */
 
-	@blueDarkest: #005283;
-	@blueDarker: #3d6088;
-	@blueDark: #006daf;
-	@blue: #41c2ff;
-	@blueLight: #99d9ff;
-	@grayLight: #92a3bf;
-	@gray: #8596b3;
-	@grayDark: #7f90ac;
-	@red: #C94D35;
-	@redBorder: #713c2a;
-	@orange: #9e6727;
-	@brown: #826f69;
-	@greenDark: #7ba2a7;
-	@green: #abc78a;	
-	@greenLight: #e2e8e3;
-	@greenLightBorder: #b0b1b2;
 	@white: #FFFFFF;
+	@black: #333333;
+	@gray: #b7bfc8;
+	@grayLight: #D7D7D7;
+	@grayDark: #656E77;
+	@blue: #456479;	
+	@brown: #826f69;
+	@yellow: #d4b34e;
+	@green: #4b7945;
+	@orange: #be7c08;
+	@red: #BE2408;
 
 
 /* Margins, Paddings, and Spacings */
@@ -50,7 +44,7 @@
 
 	@em-font-style: @text-font-family-italic;
 
-	@strong-font-family: OpenSans-Bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	@strong-font-family: @text-font-family-bold;
 	@strong-font-weight: normal;
 	@strong-color: #333;
 
@@ -62,8 +56,8 @@
 	
 	@link-font-size: 18px;
 	@link-font-wieght: bold;
-	@link-color: #006daf;
-	@link-color-hover: @blueDarkest;
+	@link-color: @red;
+	@link-color-hover: desaturate(@red, 10%);
 	@link-decoration: none;
 	@link-decoration-hover: underline;
 	
@@ -108,7 +102,7 @@
 	@list-item-type: ~'';
 
 
-/* Elements */
+/* Separators */
 
 	@blockquote-font-size: 18px;
 	@blockquote-font-style: italic;
@@ -116,9 +110,9 @@
 	@blockquote-color: #666666;
 	
 	@hr-border-type: solid;
-	@hr-border-color: @greenLightBorder;
+	@hr-border-color: @green;
 	@hr-border-width: 1px 0 0;
-	@hr-border-margin: 0px;
+	@hr-border-margin: 45px 0;
 	
 
 /* Buttons */
@@ -173,23 +167,23 @@
 	    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 	}
 
-	@button-primary-top: @blueDark;
+	@button-primary-top: @blue;
 	@button-primary-top-hover: darken(@button-primary-top, 12%);
-	@button-primary-bottom: @blueDarkest;
+	@button-primary-bottom: @blue;
 	@button-primary-bottom-hover: darken(@button-primary-bottom, 12%);
 	@button-primary-color: @white;
 	@button-primary-shadow: @text-shadow-on-dark;
-	@button-primary-border: @blueDarkest;
-	@button-primary-border-hover: @blueDarkest;
+	@button-primary-border: @blue;
+	@button-primary-border-hover: @blue;
 	
-	@button-secondary-top: @greenDark;
+	@button-secondary-top: @green;
 	@button-secondary-top-hover: darken(@button-secondary-top, 20%);
-	@button-secondary-bottom: @greenDark;
+	@button-secondary-bottom: @green;
 	@button-secondary-bottom-hover: darken(@button-secondary-bottom, 20%);
 	@button-secondary-color: @white;
 	@button-secondary-shadow: @text-shadow-on-dark;
 	@button-secondary-border: #7ba2a7;
-	@button-secondary-border-hover: @blueDarkest;
+	@button-secondary-border-hover: @blue;
 
 	@button-alert-top: @brown;
 	@button-alert-top-hover: darken(@button-alert-top, 20%);
@@ -198,7 +192,7 @@
 	@button-alert-color: @white;
 	@button-alert-shadow: @text-shadow-on-dark;
 	@button-alert-border: #8596b3;
-	@button-alert-border-hover: @blueDarkest;
+	@button-alert-border-hover: @blue;
 
 	@button-warning-top: @red;
 	@button-warning-top-hover: darken(@button-warning-top, 20%);
@@ -207,7 +201,7 @@
 	@button-warning-color: @white;
 	@button-warning-shadow: @text-shadow-on-dark;
 	@button-warning-border: #713c2a;
-	@button-warning-border-hover: @blueDarkest;
+	@button-warning-border-hover: @blue;
 
 
 /* Forms */
@@ -223,21 +217,21 @@
 	@form-border-radius: 4px;
 	@form-border-color-focus: #666666;
 
-	@form-select-color: @blueDarker;
-	@form-label-color: @blueDarker;
+	@form-select-color: @blue;
+	@form-label-color: @blue;
 
 
 /* Tables */
 
-	@table-background-color: @greenLight;
+	@table-background-color: @green;
 	@table-background-color-striped: #FEFEFE;
 
 	@table-margins: @base-line-height;	
 	@table-padding: 15px;
 	
-	@table-border: 1px solid @greenLightBorder;
+	@table-border: 1px solid @green;
 	@table-border-radius: 5px;
 
-	@table-td-border-top: 1px solid @greenLightBorder;
+	@table-td-border-top: 1px solid @green;
 	@table-line-height: 18px;
 
