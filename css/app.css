@@ -3744,33 +3744,33 @@ h6 a {
 }
 h1 {
   font-size: 60px;
-  line-height: 70px;
-  margin-bottom: 21px;
+  line-height: 60px;
+  margin-bottom: 30px;
 }
 h2 {
   font-size: 48px;
-  line-height: 58px;
-  margin-bottom: 18px;
+  line-height: 48px;
+  margin-bottom: 30px;
 }
 h3 {
   font-size: 36px;
-  line-height: 46px;
-  margin-bottom: 12px;
+  line-height: 36px;
+  margin-bottom: 30px;
 }
 h4 {
   font-size: 30px;
-  line-height: 36px;
-  margin-bottom: 10px;
+  line-height: 30px;
+  margin-bottom: 30px;
 }
 h5 {
   font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 10px;
+  line-height: 24px;
+  margin-bottom: 30px;
 }
 h6 {
   font-size: 18px;
-  line-height: 24px;
-  margin-bottom: 10px;
+  line-height: 18px;
+  margin-bottom: 30px;
 }
 .subheader {
   color: #777;
