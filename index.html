@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
     ================================================== -->
 	<meta charset="utf-8">
-	<title>Rebar: jumpstart your applications HTML & CSS</title>
+	<title>Rebar: jumpstart your applications HTML &amp; CSS</title>
 	<meta name="description" content="">
 	<meta name="author" content="Brennan Novak">
 
@@ -36,23 +36,23 @@
 <body>
 
 	<div id="messages">
-		<div class="error clearfix">
+		<div class="error">
 			<span class="message-text">Whoa Cowboy, you've mozyed on over to an error that you ain't supposed to have!</span>
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
-		<div class="warning clearfix">
+		<div class="warning">
 			<span class="message-text">This here be a warnin to yuh, just a warnin mind you!</span>
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
-		<div class="debug clearfix">
+		<div class="debug">
 			<span class="message-text">What kind of bug is a debug?</span>
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
-		<div class="info clearfix">
+		<div class="info">
 			<span class="message-text">Hi, hi, hi, I am info</span>
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
-		<div class="success clearfix">
+		<div class="success">
 			<span class="message-text">Success, you sly dog you, keep killin those ladies!</span>
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
@@ -519,44 +519,44 @@
 
 
 	<!-- JS ================================================== -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://jonrohan.github.io/ZeroClipboard/javascripts/ZeroClipboard.js" ></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript">
 
+		// on ready
+		$(function() {
 
-		$('.gist').hide();
+			var originalText;
 
-		$('.hidden-code').click(function(e) {
-			e.preventDefault();
-			$(this).children('.gist').slideToggle();
-		})
+			$('.gist').hide();
 
-		var originalText;
-		$('.example-grid').children().hover(
-			function() {
-				originalText = $(this).text();
-				$(this).html($(this).width()+'px');
-			},
-			function() {
-				$(this).html(originalText);
-			}
-		);
+			$('.hidden-code').click(function(e) {
+				e.preventDefault();
+				$(this).children('.gist').slideToggle();
+			});
 
+			$('.example-grid').children().hover(
+				function() {
+					originalText = $(this).text();
+					$(this).html($(this).width()+'px');
+				},
+				function() {
+					$(this).html(originalText);
+				}
+			);
 
+			$('.color-palate-item').on('click', function() {
+				var rgb, hex, originalText, rgb_color;
+				rgb_color = $(this).css('background-color'),
+				rgb_color = rgb_color.replace('rgb(', ''),
+				rgb_color = rgb_color.replace(')', '');
+				rgb = rgb_color.split(', ');
+				hex = "#" + ((1 << 24) + (parseInt(rgb[0]) << 16) + (parseInt(rgb[1]) << 8) + parseInt(rgb[2])).toString(16).slice(1);
+				alert('HEX Color is: ' + hex);
+			});
 
-		$('.color-palate-item').on('click', function() {
-
-			var rgb_color = $(this).css('background-color'),
-			rgb_color = rgb_color.replace('rgb(', ''),
-			rgb_color = rgb_color.replace(')', '');
-		
-			var rgb = rgb_color.split(', ');
-			var hex = "#" + ((1 << 24) + (parseInt(rgb[0]) << 16) + (parseInt(rgb[1]) << 8) + parseInt(rgb[2])).toString(16).slice(1);
-
-			alert('HEX Color is: ' + hex);
 		});
 	
 	</script>
-
+	
 </body>
 </html>
