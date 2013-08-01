@@ -6,22 +6,14 @@
 /* Clearfix helper */
 
 .clearfix {
-  *zoom: 1;
-  &:before,
-  &:after {
-    display: table;
+  zoom: 1;
+  &:before, &:after {
     content: "";
-    line-height: 0;
+    display: table;
   }
   &:after {
     clear: both;
   }
-}
-
-/* Clear all rows */
-
-.row {
-  .clearfix();
 }
 
 /* Vertical Margins & Padding */
