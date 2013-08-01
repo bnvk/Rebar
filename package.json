@@ -1,0 +1,30 @@
+{
+  "name": "Rebar",
+  "version": "0.0.1",
+  "author": "Brennan Novak <hi@brennannovak.com>",
+  "contributors":[
+    { "name": "Edward Hotchkiss", "github": "http://github.com/edwardhotchkiss/" }
+  ],
+  "description": "Jumpstart your application with responsive HTML5, CSS3, SVG, and Webfonts",
+  "homepage": "https://github.com/brennannovak/Rebar/",
+  "bugs": {
+    "url": "https://github.com/brennannovak/Rebar/issues"
+  },
+  "repository":{
+    "type":"git",
+    "url":"git://github.com/brennannovak/Rebar.git"
+  },
+  "engines":{
+    "node":">= 0.10.0"
+  },
+  "dependencies": {
+    "grunt": "0.4.1",
+    "grunt-contrib-less": "0.5.0",
+    "grunt-contrib-cssmin": "0.4.1",
+    "grunt-contrib-watch": "0.2.0"
+  },
+  "licenses":[{
+    "type":"MIT",
+    "url":"https://github.com/brennannovak/Rebar/LICENSE"
+  }]
+}

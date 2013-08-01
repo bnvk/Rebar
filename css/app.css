@@ -1,6 +1,7 @@
-/*	Rebar v0.1
-*	Designed and built by @brennannovak
-*/
+/**
+ * Rebar v0.1
+ * Designed and built by @brennannovak
+ */
 /* Global - Must be included before the config file incase you want specify custom fonts or backgrounds */
 /* #Fonts
 ================================================== */
@@ -4959,8 +4960,7 @@ label span.form_error {
     font-size: 1em;
   }
 }
-/* #Clearing
-================================================== */
+/* --- Clearing --- */
 .container:after {
   content: "\0020";
   display: block;
@@ -4968,37 +4968,31 @@ label span.form_error {
   clear: both;
   visibility: hidden;
 }
-/* Use clearfix class on parent to clear nested columns,
-    or wrap each row of columns in a <div class="row"> */
-.clearfix:before,
-.clearfix:after,
-.row:before,
-.row:after {
-  content: '\0020';
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
-  clear: both;
+/* Clearfix helper */
+.clearfix {
+  *zoom: 1;
 }
-.row:after,
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
 .clearfix:after {
   clear: both;
 }
-.row,
-.clearfix {
-  zoom: 1;
-  clear: both;
+/* Clear all rows */
+.row {
+  *zoom: 1;
 }
-/* You can also use a <br class="clear" /> to clear columns */
-.clear {
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
   clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
 }
 /* Vertical Margins & Padding */
 .remove-top {
@@ -5058,6 +5052,16 @@ label span.form_error {
   color: #ffffff;
   border-bottom: 1px solid #b7bfc8;
   background-color: #ffffff;
+  *zoom: 1;
+}
+#messages div:before,
+#messages div:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+#messages div:after {
+  clear: both;
 }
 #messages span.message-text {
   width: 90%;
