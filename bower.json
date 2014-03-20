@@ -1,0 +1,29 @@
+{
+  "name": "Rebar",
+  "version": "0.1.0",
+  "homepage": "https://github.com/brennannovak/Rebar",
+  "authors": [
+    "Brennan Novak <hi@brennannovak.com>"
+  ],
+  "description": "A lightweight HTML5 / CSS3 framework for making responsive websites using the LESS preprocessor",
+  "main": "css/app.css",
+  "keywords": [
+    "less",
+    "css3",
+    "html5",
+    "svg",
+    "responsive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "~3.1.0",
+    "less-elements": "master"
+  }
+}
