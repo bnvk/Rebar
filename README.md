@@ -1,4 +1,4 @@
-![Rebar, a lightweight HTML5 / CSS3 framework for making responsive websites, built using the LESS preprocessor](https://brennannovak.com/uploads/images/work/Rebar-Cover.png)
+![Rebar - a lightweight HTML5 / CSS3 framework for making responsive websites, built using the LESS preprocessor](rebar-logo.png)
 
 Rebar
 =====
