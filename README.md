@@ -92,17 +92,20 @@ At the moment Rebar does not have a theme generator or anything, so you need rec
 Where's the JavaScript?
 --------------------------------
 
-If you need a lightbox, dropdown menu, tooltip, or other snazy JS things- you ain't gonna find that here. This is an intentional decision, we don't ever plan to add JS libraries to Rebar. We believe responsive design and  CSS is a complex enough thing to warrant separting it from JS. We suggest you instal modular robust JS tools in addition to Rebar using [Bower.io](http://bower.io) as it is a great tool for front-end developers.
+If you need a lightbox, dropdown menu, tooltip, or other snazy JS things- you ain't gonna find it here. This is an intentional decision, Rebar is a CSS only framework. We believe responsive design and CSS is a complex enough thing to warrant separting it from JS. We suggest you install robust JS libraries and modules instead of large monolithic counterparts.
 
 ### Dependencies
 
 The following depencies are installed via Bower when you install Rebar. If you don't use Bower you can manually install them yourself. These are both very helpful libraries for doing fun CSS3 animation, shapes, and gradients. To add these to your application, just link to the LESS or CSS in your ```app.less``` or ```rebar.less``` manifest file.
 
 Dan Eden's [Animate.css](http://daneden.me/animate)
+
 Useful mixins [LESS Elements](http://lesselements.com)
 
 ### Credits
 
 Brennan Novak creator of [Rebar](https://brennannovak.com)
+
 David Gamache's for creating [Skeleton Framework](http://www.getskeleton.com)
+
 Awesome CSS preprocessor [LESS](http://lesscss.org)
