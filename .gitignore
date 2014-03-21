@@ -1,3 +1,4 @@
 .DS_Store
+codekit-config.json
 node_modules/
 bower_components/

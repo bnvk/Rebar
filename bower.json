@@ -1,12 +1,12 @@
 {
   "name": "Rebar",
-  "version": "0.1.0",
-  "homepage": "https://github.com/brennannovak/Rebar",
+  "version": "0.2.0",
+  "homepage": "https://brennannovak.com/work/rebar",
   "authors": [
     "Brennan Novak <hi@brennannovak.com>"
   ],
-  "description": "A lightweight HTML5 / CSS3 framework for making responsive websites using the LESS preprocessor",
-  "main": "css/app.css",
+  "description": "A lightweight HTML5 / CSS3 framework for making responsive websites, built using the LESS preprocessor",
+  "main": "index.html",
   "keywords": [
     "less",
     "css3",
