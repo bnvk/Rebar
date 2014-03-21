@@ -1,39 +1,39 @@
-/* Rebar v0.1.0
- * Designed and built by @brennannovak
- * http://github.com/brennannovak/Rebar
+/* Your Groovy Application v0.0.0
+ * Designed and built using Rebar by @brennannovak
+ * http://yourgroovyappplication.com
  */
 
-/* Global - Must be included before the config file incase you want specify custom fonts or backgrounds */
+/* Global App - include before config file to specify custom fonts or backgrounds */
 @import "app/webfonts.less";
 @import "app/icons.less";
 @import "app/backgrounds.less";
 
-/* Bower Packages */
+/* Config - change settings in this file for the look and feel of your style */
+@import "config.less";
+
+/* Bower */
 @import "../bower_components/animate.css/animate.css";
 @import "../bower_components/less-elements/elements.less";
 
-/* Config - Change the settings in this file change the look and feel of your style */
-@import "config.less";
-
-/* Rebar - These files reset and style all the basic HTML elements */
+/* Rebar - these files reset and style all the basic HTML elements */
 @import "rebar/base.less";
-@import "rebar/links.less";
-@import "rebar/typography.less";
-@import "rebar/navigation.less";
-@import "rebar/lists.less";
-@import "rebar/separators.less";
-@import "rebar/images.less";
 @import "rebar/buttons.less";
-@import "rebar/forms.less";
-@import "rebar/tables.less";
-@import "rebar/responsive-grid.less";
-@import "rebar/responsive-boxes.less";
 @import "rebar/clearing.less";
-@import "rebar/shapes.less";
+@import "rebar/forms.less";
 @import "rebar/grid.less";
+@import "rebar/images.less";
+@import "rebar/links.less";
+@import "rebar/lists.less";
+@import "rebar/messages.less";
+@import "rebar/navigation.less";
+@import "rebar/separators.less";
+@import "rebar/responsive-boxes.less";
+@import "rebar/responsive-grid.less";
+@import "rebar/shapes.less";
+@import "rebar/tables.less";
+@import "rebar/typography.less";
 
 /* App */
-@import "app/messages.less";
 @import "app/web.less";
 @import "app/tablet.less";
 @import "app/mobile.less";
