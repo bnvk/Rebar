@@ -1,3 +1,6 @@
+/* Rebar v0.1.0
+ * config.less
+ */
 
 /* Colors */
 
@@ -6,12 +9,12 @@
 	@gray: #b7bfc8;
 	@grayLight: #D7D7D7;
 	@grayDark: #656E77;
-	@blue: #456479;	
+	@blue: #0A87BF;	
 	@brown: #826f69;
-	@yellow: #d4b34e;
-	@green: #4b7945;
-	@orange: #be7c08;
-	@red: #BE2408;
+	@yellow: #F8E406;
+	@green: #078754;
+	@orange: #F38B00;
+	@red: #B50606;
 
 /* Container */
 
@@ -30,8 +33,10 @@
 
 /* Grid */
 
+  @grid-margin-top: 10px;
+  @grid-margin-bottom: 10px;
 	@grid-gutter: 20px;
-	@column-count: 16;
+	@grid-column-count: 16;
 
 	@tablet-column-width: 100%;	
 	@mobile-column-width: 100%;
@@ -111,11 +116,12 @@
 
 /* Lists */
 
-	@list-margin: ~'';
-	@list-padding: ~'';
-	@list-item-margin: ~'';
-	@list-item-padding: ~'';
-	@list-item-type: ~'';
+	@list-margin: '15px';
+	@list-padding: '0px';
+	@list-item-margin: '10px';
+	@list-item-padding: '5px';
+	@list-item-type-ordered: decimal outside;
+	@list-item-type-unordered: square outside;
 
 
 /* Separators */
@@ -126,7 +132,7 @@
 	@blockquote-color: #666666;
 	
 	@hr-border-type: solid;
-	@hr-border-color: @green;
+	@hr-border-color: @black;
 	@hr-border-width: 1px 0 0;
 	@hr-border-margin: 45px 0;
 	
@@ -251,3 +257,28 @@
 	@table-td-border-top: 1px solid @green;
 	@table-line-height: 18px;
 
+
+/* Messages */
+
+  @messages-border-bottom: 0px solid @gray;
+  @messages-padding: 10px 10px 10px 20px;
+  @messages-font-family: @text-font-family-semibold;
+  @messages-font-size: 18px;
+  @messages-line-height: 21px;
+  @messages-color: @black;
+  @messages-background: @white;
+
+  @messages-error-color: @white;
+  @messages-error-background: @red;
+
+  @messages-warning-color: @white;
+  @messages-warning-background: @orange;
+
+  @messages-debug-color: @black;
+  @messages-debug-background: @yellow;
+
+  @messages-info-color: @white;
+  @messages-info-background: @blue; 
+
+  @messages-success-color: @white;
+  @messages-success-background: @green;

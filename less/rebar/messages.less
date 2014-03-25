@@ -2,13 +2,12 @@
 
 	#messages div {
 		margin: 0px;
-		padding: 10px 10px 10px 20px;
+		padding: @messages-padding;
 		list-style: none;
-		font-family: @text-font-family-semibold;
-		text-shadow: @text-shadow-on-dark;
-		color: @white;
-		border-bottom: 1px solid @gray;
-		background-color: @white;
+		font-family: @messages-font-family;
+		color: @messages-color;
+		border-bottom: @messages-border-bottom;
+		background-color: @messages-background;
 		.clearfix();
 	}
 
@@ -18,6 +17,8 @@
 		display: block;
 		float: left;
 		text-align: left;
+		font-size: @messages-font-size;
+		line-height: @messages-line-height;
 	}
 
 	#messages abbr.message-close {
@@ -26,7 +27,6 @@
 		display: block;
 		background: @white;
 		color: @text-color;
-		box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.6);
 		padding: 2px 10px;
 		font-size: 12px;
 		font-weight: bold;
@@ -35,13 +35,12 @@
 	
 	#messages abbr.message-close:hover {
 		background: @gray;
-		box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.6);		
 	}
 
-	#messages .error   { background-color: @red; }
-	#messages .warning { background-color: @orange; }
-	#messages .debug   { background-color: @yellow; }
-	#messages .info    { background-color: @blue; }
-	#messages .success { background-color: @green; }
+	#messages .error   { background-color: @messages-error-background; color: @messages-error-color; }
+	#messages .warning { background-color: @messages-warning-background; color: @messages-warning-color; }
+	#messages .debug   { background-color: @messages-debug-background; color: @messages-debug-color; }
+	#messages .info    { background-color: @messages-info-background; color: @messages-info-color; }
+	#messages .success { background-color: @messages-success-background; color: @messages-success-color; }
 	
 	
