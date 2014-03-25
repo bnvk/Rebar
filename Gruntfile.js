@@ -1,4 +1,3 @@
-
 /**
  * @description watch less, compile and minify
  */
@@ -14,6 +13,7 @@ module.exports = function(grunt) {
           yuicompress: false
         },
         files: {
+          'css/rebar.css':'less/rebar.less',
           'css/app.css':'less/app.less'
         }
       }
@@ -21,6 +21,7 @@ module.exports = function(grunt) {
     cssmin: {
       compress: {
         files: {
+          'css/rebar.min.css': ['css/app.css'],
           'css/app.min.css': ['css/app.css']
         }
       }
