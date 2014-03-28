@@ -1,50 +1,176 @@
-/*---------------------------------------------------
-    Rebar - Grid
-  ---------------------------------------------------*/
+/**
+ * @name Rebar Grid v0.0.1
+ * @description
+ *   - web big 1140 grid
+ *   - web 960 grid
+ *   - tablet (portrait)
+ *   - mobile (portrait)
+ *   - mobile (landscape)
+ *   - auto-clearing
+ */
 
+.container {
 
-.grid(@grid-container-width, @grid-column-count, @grid-gutter) {
+  width: @container-desktop-max-width;
+  margin: 0px auto;
 
-	// Create
-	@grid-column-width: @grid-container-width / @grid-column-count;
-	
-	.container { width: @grid-container-width; word-wrap:break-word; }
+  div.row {
+    width: 100%;
+    margin-bottom: @grid-row-margin-bottom;
+    overflow: hidden;
+    .clearfix;
+  }
 
-	.container .one.column          { width: (1 * @grid-column-width - @grid-gutter); }
-	.container .two.columns         { width: (2 * @grid-column-width - @grid-gutter); }
-	.container .three.columns       { width: (3 * @grid-column-width - @grid-gutter); }
-	.container .four.columns        { width: (4 * @grid-column-width - @grid-gutter); }
-	.container .five.columns        { width: (5 * @grid-column-width - @grid-gutter); }
-	.container .six.columns         { width: (6 * @grid-column-width - @grid-gutter); }
-	.container .seven.columns       { width: (7 * @grid-column-width - @grid-gutter); }
-	.container .eight.columns       { width: (8 * @grid-column-width - @grid-gutter); }
-	.container .nine.columns        { width: (9 * @grid-column-width - @grid-gutter); }
-	.container .ten.columns         { width: (10 * @grid-column-width - @grid-gutter); }
-	.container .eleven.columns      { width: (11 * @grid-column-width - @grid-gutter); }
-	.container .twelve.columns      { width: (12 * @grid-column-width - @grid-gutter); }
-	.container .thirteen.columns    { width: (13 * @grid-column-width - @grid-gutter); }
-	.container .fourteen.columns    { width: (14 * @grid-column-width - @grid-gutter); }
-	.container .fifteen.columns     { width: (15 * @grid-column-width - @grid-gutter); }
-	.container .sixteen.columns     { width: (16 * @grid-column-width - @grid-gutter); }
+  div:first-child {
+    margin-left: 0;
+  }
 
-	.container .one-third.column   	{ width: (@grid-container-width / 3) - @grid-gutter; }
-	.container .two-thirds.column 	{ width: ((@grid-container-width / 3) * 2) - @grid-gutter; }
-	.container .half.column    		{ width: (@grid-container-width / 2) - @grid-gutter; }
+  div:last-child {
+    margin-right: 0;
+  }
 
-	.container .offset-by-one      { padding-left: @grid-column-width; }
-	.container .offset-by-two      { padding-left: @grid-column-width * 2; }
-	.container .offset-by-three    { padding-left: @grid-column-width * 3; }
-	.container .offset-by-four     { padding-left: @grid-column-width * 4; }
-	.container .offset-by-five     { padding-left: @grid-column-width * 5; }
-	.container .offset-by-six      { padding-left: @grid-column-width * 6; }
-	.container .offset-by-seven    { padding-left: @grid-column-width * 7; }
-	.container .offset-by-eight    { padding-left: @grid-column-width * 8; }
-	.container .offset-by-nine     { padding-left: @grid-column-width * 9; }
-	.container .offset-by-ten      { padding-left: @grid-column-width * 10; }
-	.container .offset-by-eleven   { padding-left: @grid-column-width * 11; }
-	.container .offset-by-twelve   { padding-left: @grid-column-width * 12; }
-	.container .offset-by-thirteen { padding-left: @grid-column-width * 13; }
-	.container .offset-by-fourteen { padding-left: @grid-column-width * 14; }
-	.container .offset-by-fifteen  { padding-left: @grid-column-width * 15; }
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12,
+  .col-13,
+  .col-14,
+  .col-15,
+  .col-16,
+  .one-third,
+  .two-thirds,
+  .half,
+  .one-quarter,
+  .three-quarters {
+    float: left;
+    display: inline;
+    margin: 0px 1%;
+    min-height: 1px;
+    word-wrap: break-word;
+  }
+  
+  .one-quarter     { width: 23.5%; }
+  .three-quarters  { width: 74.5%; }
+  .one-third       { width: 32%; }
+  .two-thirds      { width: 52%; }
+  .half	           { width: 49%; }
+}
 
+.grid(@grid-container-width, @grid-width, @grid-column-count, @grid-gutter-param) {
+
+	.container {
+
+	  width: @grid-container-width;
+
+    .col-1           { width: 4.4%; }
+    .col-2           { width: 10.8%; }
+    .col-3           { width: 17.2%; }
+    .col-4           { width: 23.6%; }
+    .col-5           { width: 30%; }
+    .col-6           { width: 36.4%; }
+    .col-7           { width: 42.8%; }
+    .col-8           { width: 49.0%; }
+    .col-9           { width: 55.2%; }
+    .col-10          { width: 61.6%; }
+    .col-11          { width: 68%; }
+    .col-12          { width: 74.4%; }
+    .col-13          { width: 80.8%; }
+    .col-14          { width: 87.2%; }
+    .col-15          { width: 93.6%; }
+    .col-16          { width: 100%; }
+
+    .col-offset-1    { padding-left: 4.4%; }
+    .col-offset-2    { padding-left: 10.8%; }
+    .col-offset-3    { padding-left: 17.2%; }
+    .col-offset-4    { padding-left: 23.6%; }
+    .col-offset-5    { padding-left: 30%; }
+    .col-offset-6    { padding-left: 36.4%; }
+    .col-offset-7    { padding-left: 42.8%; }
+    .col-offset-8    { padding-left: 49%; }
+    .col-offset-9    { padding-left: 55.2%; }
+    .col-offset-10   { padding-left: 61.6%; }
+    .col-offset-11   { padding-left: 68%; }
+    .col-offset-12   { padding-left: 74.4%; }
+    .col-offset-13   { padding-left: 80.8%; }
+    .col-offset-14   { padding-left: 87.2%; }
+    .col-offset-15   { padding-left: 93.6%; }
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+  .grid(@container-desktop-max-width, @container-desktop-max-width, @grid-column-count, @grid-gutter);
+}
+
+/* ---- web, 960 grid ---- */
+@media only screen and (min-width: 960px) and (max-width: 1139px) {
+  .grid(@container-desktop-width, @container-desktop-width, @grid-column-count, @grid-gutter);
+}
+
+/* ---- tablet (portrait) design for a width of 768px ---- */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .grid(@container-tablet-width, @container-tablet-width, @grid-column-count, @grid-gutter);
+}
+
+/* ---- mobile (landscape) design for a width of 480px ---- */
+@media only screen and (max-width: 767px) {
+
+  .container {
+
+    width: @container-mobile-width;
+
+    div.row {
+      margin-bottom: 0px;
+    }
+
+    .col-1,
+    .col-2,
+	  .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12,
+    .col-13,
+    .col-14,
+    .col-15,
+    .col-16,
+    .one-quarter,
+    .three-quarters,
+    .one-third,
+    .two-thirds,
+    .half {
+      margin: 0px 0px @grid-row-margin-bottom 0px;
+		  width: @container-mobile-width;
+	  }
+
+    .col-offset-1,
+    .col-offset-2,
+    .col-offset-3,
+    .col-offset-4,
+    .col-offset-5,
+    .col-offset-6,
+    .col-offset-7,
+	  .col-offset-8,
+    .col-offset-9,
+    .col-offset-10,
+    .col-offset-11,
+    .col-offset-12,
+    .col-offset-13,
+    .col-offset-14,
+    .col-offset-15 {
+      margin: 0px 0px @grid-row-margin-bottom 0px;
+    }
+  }
 }
