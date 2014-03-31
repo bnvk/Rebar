@@ -64,6 +64,7 @@
   .half	           { width: 49%; }
 }
 
+/* --- LESS mixin to generate multiple size grids --- */
 .grid(@grid-container-width, @grid-width, @grid-column-count, @grid-gutter-param) {
 
 	.container {
@@ -105,21 +106,22 @@
 	}
 }
 
+/* ---- Web, max grid ---- */
 @media only screen and (min-width: 1140px) {
   .grid(@container-desktop-max-width, @container-desktop-max-width, @grid-column-count, @grid-gutter);
 }
 
-/* ---- web, 960 grid ---- */
+/* ---- Web, 960 grid ---- */
 @media only screen and (min-width: 960px) and (max-width: 1139px) {
   .grid(@container-desktop-width, @container-desktop-width, @grid-column-count, @grid-gutter);
 }
 
-/* ---- tablet (portrait) design for a width of 768px ---- */
+/* ---- Tablet (portrait) design for a width of 768px ---- */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .grid(@container-tablet-width, @container-tablet-width, @grid-column-count, @grid-gutter);
 }
 
-/* ---- mobile (landscape) design for a width of 480px ---- */
+/* ---- Mobile (landscape) design for a width of 480px ---- */
 @media only screen and (max-width: 767px) {
 
   .container {
