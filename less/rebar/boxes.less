@@ -1,0 +1,94 @@
+.container {
+
+  .boxes-outer { width: 19%; padding-bottom: 19%; position: relative; float: left; margin: 0 1.25% 1.25% 0; display: block; }
+
+  .boxes-outer:nth-child(6),
+  .boxes-outer:nth-child(11),
+  .boxes-outer:nth-child(16) {
+    border-right: 0px solid red;
+    margin-right: 0px;
+  }
+
+	.boxes-inner h1,
+	.boxes-inner h2,
+	.boxes-inner h3  { font-size: @boxes-header-font-size; }
+	.boxes-inner p   { font-size: @boxes-paragraph-font-size; }
+	.boxes-inner p a { font-size: @boxes-paragraph-font-size; color: @boxes-link-color; }
+
+	.boxes-inner a.bottom { position: absolute; bottom: 20px; }
+	.boxes-inner a.bottom.right { right: 20px; }
+}
+
+/* --- LESS mixin to generate multiple size boxes --- */
+.boxes-outer-right(@size, @counter: 10) when (@counter > 0) {
+// .boxes-outer-right(@counter - 1); // next iteration
+  // code for each iteration
+  .boxes-outer:nth-child(@{size}size) {
+    border-right: 1px solid red;
+    margin-right: 0px;
+  }
+
+}  
+
+.boxes-outer-right(5);
+
+.boxes(@blocks, @width, @margin-right, @margin-bottom) {
+
+  .container {
+
+    .boxes-outer {
+    	width: @width;
+    	padding-bottom: @width;
+    	margin: 0 @margin-right @margin-bottom 0;
+    }
+  
+    .boxes-inner {
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      bottom: 1px;
+      right: 1px;
+      padding: 10px;
+      color: #555555;
+      overflow: hidden;
+    }
+
+  }
+  
+}
+
+/* Five Column */
+@media only screen and (min-width : 1291px) and (max-width : 1599px) {
+  .boxes(5, 19%, 1.25%, 1.25%);
+  
+  .container { background: red; }
+}
+
+/* Four Column */
+@media only screen and (min-width : 1051px) and (max-width : 1290px) {
+  .boxes(4, 23%, 2.5%, 2%);
+  
+  .container { background: green; }
+}
+
+/* Three Column */
+@media only screen and (min-width : 651px) and (max-width : 1050px) {
+  .boxes(3, 31.3%, 2%, 1.5%);
+
+  .container { background: purple; }
+}
+
+/* Two Column */
+@media only screen and (min-width : 481px) and (max-width : 650px) {
+  .boxes(2, 46%, 2%, 1.5%);
+  
+  .container { background: orange; }
+
+}
+
+/* One Column */
+@media only screen and (max-width : 480px) {
+  .boxes(1, 98%, .5%, 1%);
+
+  .container { background: yellow; } 
+}
