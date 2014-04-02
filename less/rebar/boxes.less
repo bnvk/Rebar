@@ -1,94 +1,92 @@
-.container {
+/**
+ * @name Rebar Boxes
+ * @description
+ *   - web max 1140
+ *   - web 960
+ *   - tablet
+ *   - mobile
+ */
 
-  .boxes-outer { width: 19%; padding-bottom: 19%; position: relative; float: left; margin: 0 1.25% 1.25% 0; display: block; }
+.boxes-outer { position: relative; float: left; display: block; }
+.boxes-inner h1,
+.boxes-inner h2,
+.boxes-inner h3,
+.boxes-inner h4  { font-size: @boxes-header-font-size; margin-bottom: @boxes-padding; }
+.boxes-inner p   { font-size: @boxes-paragraph-font-size; }
+.boxes-inner p a { font-size: @boxes-paragraph-font-size; color: @boxes-link-color; }
+.boxes-inner a.bottom { position: absolute; bottom: @boxes-padding; }
+.boxes-inner a.bottom.right { right: @boxes-padding; }
 
-  .boxes-outer:nth-child(6),
-  .boxes-outer:nth-child(11),
-  .boxes-outer:nth-child(16) {
-    border-right: 0px solid red;
-    margin-right: 0px;
-  }
-
-	.boxes-inner h1,
-	.boxes-inner h2,
-	.boxes-inner h3  { font-size: @boxes-header-font-size; }
-	.boxes-inner p   { font-size: @boxes-paragraph-font-size; }
-	.boxes-inner p a { font-size: @boxes-paragraph-font-size; color: @boxes-link-color; }
-
-	.boxes-inner a.bottom { position: absolute; bottom: 20px; }
-	.boxes-inner a.bottom.right { right: 20px; }
-}
-
-/* --- LESS mixin to generate multiple size boxes --- */
-.boxes-outer-right(@size, @counter: 10) when (@counter > 0) {
-// .boxes-outer-right(@counter - 1); // next iteration
-  // code for each iteration
-  .boxes-outer:nth-child(@{size}size) {
-    border-right: 1px solid red;
-    margin-right: 0px;
-  }
-
-}  
-
-.boxes-outer-right(5);
-
+/* --- LESS mixin to generate multiple sizes --- */
 .boxes(@blocks, @width, @margin-right, @margin-bottom) {
-
-  .container {
 
     .boxes-outer {
     	width: @width;
     	padding-bottom: @width;
-    	margin: 0 @margin-right @margin-bottom 0;
+    	margin-right: @margin-right;
+    	margin-bottom: @margin-bottom;
     }
-  
+
+    @nth1: @blocks + 1;
+    @nth2: (@blocks * 2) + 1;
+    @nth3: (@blocks * 3) + 1;
+    @nth4: (@blocks * 4) + 1;
+    @nth5: (@blocks * 5) + 1;
+    @nth6: (@blocks * 6) + 1;
+    @nth7: (@blocks * 7) + 1;
+    @nth8: (@blocks * 8) + 1;
+    @nth9: (@blocks * 9) + 1;
+    @nth10: (@blocks * 10) + 1;
+
+    .boxes-outer:nth-child(@{nth1}), 
+    .boxes-outer:nth-child(@{nth2}),
+    .boxes-outer:nth-child(@{nth3}),
+    .boxes-outer:nth-child(@{nth4}),
+    .boxes-outer:nth-child(@{nth5}),
+    .boxes-outer:nth-child(@{nth6}),
+    .boxes-outer:nth-child(@{nth7}),
+    .boxes-outer:nth-child(@{nth8}),
+    .boxes-outer:nth-child(@{nth9}),
+    .boxes-outer:nth-child(@{nth10}) {
+      margin-right: 0px;
+    }
+
     .boxes-inner {
       position: absolute;
       left: 1px;
       top: 1px;
       bottom: 1px;
       right: 1px;
-      padding: 10px;
+      padding: @boxes-padding;
       color: #555555;
       overflow: hidden;
     }
+}
 
+/* Five Column, 1140 web max  */
+@media only screen and (min-width: 1140px) {
+  .container {
+    .boxes(5, 19.1%, 1.1%, 1.2%);
   }
-  
 }
 
-/* Five Column */
-@media only screen and (min-width : 1291px) and (max-width : 1599px) {
-  .boxes(5, 19%, 1.25%, 1.25%);
-  
-  .container { background: red; }
+/* Four Column, 960 web */
+@media only screen and (min-width: 960px) and (max-width: 1139px) {
+  .container {
+    .boxes(4, 23.1%, 2.5%, 2.5%);
+  }
 }
 
-/* Four Column */
-@media only screen and (min-width : 1051px) and (max-width : 1290px) {
-  .boxes(4, 23%, 2.5%, 2%);
-  
-  .container { background: green; }
+/* Three Column, tablet landscape  */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    .boxes(3, 31%, 3.5%, 3.5%);
+  }
 }
 
-/* Three Column */
-@media only screen and (min-width : 651px) and (max-width : 1050px) {
-  .boxes(3, 31.3%, 2%, 1.5%);
-
-  .container { background: purple; }
-}
-
-/* Two Column */
-@media only screen and (min-width : 481px) and (max-width : 650px) {
-  .boxes(2, 46%, 2%, 1.5%);
-  
-  .container { background: orange; }
-
-}
-
-/* One Column */
-@media only screen and (max-width : 480px) {
-  .boxes(1, 98%, .5%, 1%);
-
-  .container { background: yellow; } 
+/* Two Column, mobile portrait & landscape */
+@media only screen and (max-width: 767px) {
+  .container {
+    .boxes(2, 47.7%, 4.5%, 4.5%);
+  }
 }
