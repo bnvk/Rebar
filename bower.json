@@ -3,7 +3,8 @@
   "version": "0.2.0",
   "homepage": "https://brennannovak.com/work/rebar",
   "authors": [
-    "Brennan Novak <hi@brennannovak.com>"
+    "Brennan Novak https://brennannovak.com",
+    "Edward Hotchkiss http://github.com/edwardhotchkiss"
   ],
   "description": "A lightweight HTML5 / CSS3 framework for making responsive websites, built using the LESS preprocessor",
   "main": "index.html",
@@ -17,6 +18,14 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "bower.json",
+    "codekit-config.json",
+    "Gruntfile.js",
+    "package.json",
+    "README.md",
     "node_modules",
     "bower_components",
     "test",
