@@ -5,10 +5,11 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Rebar: jumpstart your applications HTML &amp; CSS</title>
+	<title>Rebar is a lightweight HTML5 / CSS3 framework for making responsive websites built using the LESS preprocessor</title>
 	<meta name="description" content="">
 	<meta name="author" content="Brennan Novak">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/rebar.css">
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/guide.css">
 	<!--[if lt IE 9]>
@@ -23,11 +24,11 @@
 
 	<div id="messages">
 		<div class="error">
-			<span class="message-text">Whoa Cowboy, you've mozyed on over to an error that you ain't supposed to have!</span>
+			<span class="message-text">Whoa Cowboy, you've mozyed on over to an error!</span>
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
 		<div class="warning">
-			<span class="message-text">This here be a warnin to yuh, just a warnin mind you!</span>
+			<span class="message-text">This here be a warning to you, just a warning!</span>
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
 		<div class="debug">
@@ -35,514 +36,450 @@
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
 		<div class="info">
-			<span class="message-text">Hi, hi, hi, I am info</span>
+			<span class="message-text">Hi, I am info message</span>
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
 		<div class="success">
-			<span class="message-text">Success, you sly dog you, keep killin those ladies!</span>
+			<span class="message-text">Success, you sly dog you!</span>
 			<abbr title="Close" class="message-close">X</abbr>
 		</div>
-	</div>		
-
+	</div>
 
 	<div class="container add-top">
-
-		<div class="col-16 content">
-			<h1>Rebar: Style Guide</h1>
-			<h5>Jumpstart your application with responsive HTML5, CSS3, SVG, and Webfonts</h5>
+		<div class="row add-bottom">
+			<h1 class="hide">Rebar</h1>
+      <object class="logo" data="images/rebar.svg">
+			    <img class="logo" src="images/rebar.png">
+			</object>
+			<p><strong>Rebar</strong> is a lightweight HTML5 / CSS3 framework for making responsive websites built using the LESS preprocessor</p>
 		</div>
-
 		<div class="row">
 			<div class="half">
 				<h3>This Style Guide</h3>
-				<p>This is a collection of CSS styles and corresponding HTML elements that are currently being styled. Use this code to develop the front-end of your website. A bit of this code was hacked from the <a href="http://www.getskeleton.com">Skeleton Framework</a>. The CSS styles are all broken apart into smaller more easy to manage <a href="http://lesscss.org/" target="_blank">LESS</a> files which need to compiled to see the changes affect the main template.css file. If you're unfamiliar with LESS I suggest <a href="http://incident57.com/codekit/" target="_blank">CodeKit</a> for Mac OS, or <a href="http://gruntjs.com/" target="_blank">Grunt</a> (which uses Node.js) for other platforms</p>
-			</div>		
+				<p>This is a collection of CSS styles and corresponding HTML elements that are currently being styled. Use this code to develop the front-end of your website.</p>
+				<p>The CSS styles are all broken apart into smaller easy to manage <a href="http://lesscss.org/" target="_blank">LESS</a> files that draw from configurable variables in the <strong>less/rebar/config.less</strong> file which is then compiled to CSS.</p>
+				<p>You can install <strong>Rebar</strong> using the <a href="http://bower.io" target="_blank">Bower</a> package manager by typing:</p>
+				<pre>$ bower install rebar</pre>
+				<p>If you're unfamiliar with LESS I suggest <a href="http://incident57.com/codekit/" target="_blank">CodeKit</a> for Mac OS, or <a href="http://gruntjs.com/" target="_blank">Grunt</a> which uses Node.js and runs on the command line.</p>
+			</div>
 			<div class="half">
 				<h3>About Rebar</h3>
 				<p>Rebar is a collection of modular CSS files that helps rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
-	
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="one-third">
 				<h3>3 Core Principles</h3>
-				<p>Skeleton is built on three core principles:</p>
+				<p>Rebar is built on three core principles:</p>
 				<ul class="square">
-					<li><strong>A Responsive Grid Down To Mobile</strong>: Elegant scaling from a browser to tablets to mobile.</li>
+					<li><strong>A Responsive Grid</strong>: Elegant scaling from a browser to tablets to mobile.</li>
 					<li><strong>Fast to Start</strong>: It's a tool for rapid development with best practices</li>
 					<li><strong>Style Agnostic</strong>: It provides the most basic, beautiful styles, but is meant to be overwritten.</li>
 				</ul>
 			</div>
 			<div class="one-third">
 				<h3>Docs &amp; Support</h3>
-				<p>The easiest way to really get started with Skeleton is to check out the full docs and info at <a href="http://www.getskeleton.com">www.getskeleton.com.</a>. Skeleton is also open-source and has a <a href="https://github.com/dhgamache/skeleton">project on git</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@getskeleton.com">hi@getskeleton.com</a>.</p>
+				<p>The easiest way to start developing with Rebar is to check out the docs & info on this page and download the <a href="https://github.com/brennannovak/Rebar">open source repository</a>.</p>
+				<p>If you want to help report bugs and create a pull requests with quality additions, we would be very happy. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@brennannovak.com">hi@brennannovak.com</a>.</p>
 			</div>
 			<div class="one-third">
 				<h3>Are You Hip?</h3>
-				<p>Lomo locavore swag retro stumptown four loko keytar polaroid. Portland selfies cray, plaid pop-up salvia sustainable literally. Marfa church-key 3 wolf moon narwhal aesthetic. Hoodie Marfa fixie wayfarers, Pinterest trust fund fanny pack 3 wolf moon dreamcatcher. Echo Park chillwave jean shorts ugh. IPhone Terry Richardson letterpress, literally keytar scenester kale chips tumblr dreamcatcher deep v.</p>
+				<p>Lomo locavore swag retro stumptown four loko keytar polaroid. Portland selfies cray, plaid pop-up salvia sustainable literally. Marfa church-key 3 wolf moon narwhal aesthetic. Hoodie Marfa fixie wayfarers, Pinterest trust fund fanny pack 3 wolf moon dreamcatcher. Echo Park chillwave jean shorts ugh. IPhone Terry Richardson letterpress, literally keytar scenester kale chips tumblr dreamcatcher deep v. We suggest using <a href="http://hipsum.co" target="_blank">Hipster Ipsum</a></p>
 			</div>			
 		</div>
-
+		<hr>
+		<h1 class="text-center">A Beautiful CSS Framework for Responsive Web-App Development</h1>
 		<hr class="medium">
+		<hr class="large">
+		<hr class="giant">
 
 		<!-- Wide -->
-		<div class="col-16 content">
+		<div class="doc-section" id="whatAndWhy">
+			<h3>What Is It?</h3>
+			<p>Rebar is a small collection of CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. Rebar is built on three core principles:</p>
+			<div class="row">
+				<div class="one-third">
+					<div class="img-filler"></div>
+				</div>
+				<div class="two-thirds">
+					<h5>Responsive Grid Down To Mobile</h5>
+					<p>Rebar has a familiar, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows, tablets, mobile phones (in landscape and portrait). <strong>Go ahead, resize this page!</strong></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="one-third">
+					<div class="img-filler"></div>
+				</div>
+				<div class="two-thirds">
+					<h5>Fast to Start</h5>
+					<p>Rebar is a tool for rapid development. Get started fast with CSS best practices, a well-structured grid that makes mobile consideration easy, an organized file structure and super basic UI elements like lightly styled forms, buttons, tabs and more.</p>
+				</div>
+			</div>			
+			<div class="row">
+				<div class="one-third">
+					<div class="img-filler"></div>
+				</div>
+				<div class="two-thirds">
+					<h5>Style Agnostic</h5>
+					<p>Rebar is not a UI framework. It's a development kit that provides the most basic styles as a foundation, but is ready to adopt whatever your design or style is.</p>
+				</div>
+			</div>
+		</div>
+		<hr>
 
-			<h1>A Beautiful Boilerplate for Responsive, Mobile-Friendly Development</h1>
-
-			<hr class="large">
-
-			<div class="doc-section" id="whatAndWhy">
-
-				<h3>What Is It?</h3>
-				<p>Skeleton is a small collection of CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. Skeleton is built on three core principles:</p>
-
+		<!-- The Grid 
+		================================================== -->
+		<div class="doc-section clearfix" id="grid">
+			<h3>Two Item Grid</h3>
+			<p>Rebar's base grid is a variation of the 960 grid system. The syntax is simple and it's effective cross browser, but the awesome part is that it also has the flexibility to go mobile like a champ. <strong>Go ahead, resize the browser and watch as the layout reacts!</strong></p>
+			<div class="example-grid add-bottom">
 				<div class="row">
-					<div class="col-4">
-						<div class="img-filler"></div>
-						<!--<img src="images/guide-responsive.jpg" alt="responsive" width="220" height="113">-->
-					</div>
-					<div class="col-8">
-						<h5>Responsive Grid Down To Mobile</h5>
-						<p>Skeleton has a familiar, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows, tablets, mobile phones (in landscape and portrait). <strong>Go ahead, resize this page!</strong></p>
-					</div>
+					<div class="col-1">One</div>
+					<div class="col-15">Fifteen</div>
 				</div>
-
 				<div class="row">
-					<div class="col-4">
-						<div class="img-filler"></div>
-						<!--<img src="images/guide-fast.jpg" alt="responsive" width="220" height="113">-->
-					</div>
-					<div class="col-8">
-						<h5>Fast to Start</h5>
-						<p>Skeleton is a tool for rapid development. Get started fast with CSS best practices, a well-structured grid that makes mobile consideration easy, an organized file structure and super basic UI elements like lightly styled forms, buttons, tabs and more.</p>
-					</div>
+					<div class="col-2">Two</div>
+					<div class="col-14">Fourteen</div>
 				</div>
-
 				<div class="row">
-					<div class="col-4">
-						<div class="img-filler"></div>
-						<!--<img src="images/guide-foundation.jpg" alt="responsive" width="220" height="113">-->
-					</div>
-					<div class="col-8">
-						<h5>Style Agnostic</h5>
-						<p>Skeleton is not a UI framework. It's a development kit that provides the most basic styles as a foundation, but is ready to adopt whatever your design or style is.</p>
-					</div>
+					<div class="col-3">Three</div>					
+					<div class="col-13">Thirteen</div>
 				</div>
-
-			</div>
-			<hr>
-
-
-			<!-- The Grid 
-			================================================== -->
-			<div class="doc-section clearfix" id="grid">
-
-				<h3>Two Item Grid</h3>
-				<p>Skeleton's base grid is a variation of the 960 grid system. The syntax is simple and it's effective cross browser, but the awesome part is that it also has the flexibility to go mobile like a champ. <strong>Go ahead, resize the browser and watch as the layout reacts!</strong></p>
-
-				<div class="example-grid">
-					
-					<div class="row">
-						<div class="col-1">One</div>
-						<div class="col-15">Fifteen</div>
-					</div>
-
-					<div class="row">
-						<div class="col-2">Two</div>
-						<div class="col-14">Fourteen</div>
-					</div>
-
-					<div class="row">
-						<div class="col-3">Three</div>					
-						<div class="col-13">Thirteen</div>
-					</div>
-
-					<div class="row">
-						<div class="col-4">Four</div>					
-						<div class="col-12">Twelve</div>
-					</div>
-
-					<div class="row">
-						<div class="col-5">Five</div>					
-						<div class="col-11">Eleven</div>
-					</div>
-
-					<div class="row">
-						<div class="col-6">Six</div>					
-						<div class="col-10">Ten</div>
-					</div>
-
-					<div class="row">
-						<div class="col-7">Seven</div>					
-						<div class="col-9">Nine</div>
-					</div>
-
-					<div class="row">
-						<div class="col-8">Eight</div>					
-						<div class="col-8">Eight</div>
-					</div>
-
-					<div class="row">
-						<div class="col-9">Nine</div>					
-						<div class="col-7">Seven</div>					
-					</div>
-
-					<div class="row">
-						<div class="col-10">Ten</div>
-						<div class="col-6">Six</div>					
-					</div>
-
-					<div class="row">
-						<div class="col-11">Eleven</div>
-						<div class="col-5">Five</div>
-					</div>
-
-					<div class="row">
-						<div class="col-12">Twelve</div>									
-						<div class="col-4">Four</div>					
-					</div>
-
-					<div class="row">
-						<div class="col-13">Thirteen</div>
-						<div class="col-3">Three</div>				
-					</div>
-
-					<div class="row">
-						<div class="col-14">Fourteen</div>
-						<div class="col-2">Two</div>
-					</div>
-
-					<div class="row">
-						<div class="col-15">Fifteen</div>
-						<div class="col-1">One</div>
-					</div>
-
-				</div>
-
-				<hr>
-
-				<h3>Three Item Grid</h3>
-				<p>These are examples of the grid with three columns.</p> 
-
-				<div class="example-grid">
-
-					<div class="row">
-						<div class="col-7">Seven</div>
-						<div class="col-2">Two</div>
-						<div class="col-7">Seven</div>
-					</div>
-
-					<div class="row">
-						<div class="col-6">Six</div>
-						<div class="col-4">Four</div>
-						<div class="col-6">Six</div>
-					</div>
-
-					<div class="row">
-						<div class="col-5">Five</div>
-						<div class="col-6">Six</div>
-						<div class="col-5">Five</div>
-					</div>
-
-					<div class="row">
-						<div class="col-4">Four</div>
-						<div class="col-8">Eight</div>
-						<div class="col-4">Four</div>
-					</div>
-
-					<div class="row">
-						<div class="col-3">Three</div>
-						<div class="col-10">Ten</div>
-						<div class="col-3">Three</div>
-					</div>
-
-					<div class="row">
-						<div class="col-2">Two</div>
-						<div class="col-12">Twelve</div>
-						<div class="col-2">Two</div>		
-					</div>
-					
-					<div class="row">
-						<div class="col-1">One</div>
-						<div class="col-14">Fourteen</div>
-						<div class="col-1">One</div>				
-					</div>
-
-					<div class="row">
-						<div class="col-8">Eight</div>					
-						<div class="col-6">Six</div>
-						<div class="col-2">Two</div>
-					</div>
-
-					<div class="row">
-						<div class="col-6">Six</div>					
-						<div class="col-6">Six</div>
-						<div class="col-4">Four</div>
-					</div>
-
-					<div class="row">
-						<div class="col-4">Four</div>					
-						<div class="col-8">Eight</div>
-						<div class="col-4">Four</div>
-					</div>
-
-				</div>
-			
-				<hr>
-
-				<h3>Four Item Grid</h3>
-				<p>These are examples of the grid four columns.</p> 
-
-				<div class="example-grid">
-
-					<div class="row">
-						<div class="col-4">Four</div>					
-						<div class="col-4">Four</div>
-						<div class="col-4">Four</div>					
-						<div class="col-4">Four</div>
-					</div>
-
-					<div class="row">
-						<div class="col-3">Three</div>					
-						<div class="col-5">Five</div>
-						<div class="col-5">Five</div>				
-						<div class="col-3">Three</div>
-					</div>
-
-				</div>
-
-			</div>
-
-			<hr>
-
-			<div class="doc-section clearfix" id="boxes">
-				<h3>Responsive Boxes</h3>
-
-				<div class="boxes">
-				   <div class="boxes-inner">
-					    <h3>Common Communication</h3>
-				   </div>
-				</div>
-			
-				<div class="boxes">
-				   <div class="boxes-inner">
-					    <h3>Common Food Phrases</h3>
-				   </div>
-				</div>
-			
-				<div class="boxes">
-				   <div class="boxes-inner">
-					    <h3>How To Discuss The Weather</h3>
-				   </div>
-				</div>
-			
-				<div class="boxes">
-				   <div class="boxes-inner">
-					    <h3>How To Make Introductions</h3>
-				   </div>
-				</div>
-			
-				<div class="boxes">
-				   <div class="boxes-inner">
-					    <h3>Simple Greetings</h3>
-				   </div>
-				</div>
-			
-				<div class="boxes">
-				   <div class="boxes-inner">
-					    <h3>Dates &amp; Months</h3>
-				   </div>
-				</div>
-			
-				<div class="boxes">
-				   <div class="boxes-inner">
-					    <h3>Sports Phrases</h3>
-				   </div>
-				</div>
-			
-				<div class="boxes">
-				   <div class="boxes-inner">
-					    <h3>Number Phrases</h3>
-				   </div>
-				</div>
-
-			</div>
-
-			<div class="doc-section clearfix" id="typography">
-				<h3>Typography</h3>
-				<p>The typography of Skeleton is designed to create a strong hierarchy with basic styles. The primary font is the classic Helvetica Neue, but the font stack can be easily changed with just a couple adjustments. Regular paragraphs are set at a 14px base with 21px line height.</p>
 				<div class="row">
-					<div class="col-7 headings">
-						<h1>Heading &lt;h1&gt;</h1>
-						<h2>Heading &lt;h2&gt;</h2>
-						<h3>Heading &lt;h3&gt;</h3>
-						<h4>Heading &lt;h4&gt;</h4>
-						<h5>Heading &lt;h5&gt;</h5>
-						<h6>Heading &lt;h6&gt;</h6>
-					</div>
-					<div class="col-5">
-						<blockquote>
-							<p>This is a blockquote style example. It stands out, but is awesome</p>
-							<cite>Dave Gamache, Skeleton Creator</cite>
-						</blockquote>
-					</div>
+					<div class="col-4">Four</div>					
+					<div class="col-12">Twelve</div>
 				</div>
-			</div>
-			<hr>
-
-			<div class="doc-section" id="buttons">
-				<h3>Buttons</h3>
-				<p>Buttons are intended for action and thus should have appropriate weight. The standard button is given that weight with a little bit of depth and a strong hover.</p>
-				<div class="add-bottom">
-					<h5>Normal</h5>
-					<a href="#buttons" class="button-primary" onclick="javascript:alert('This button uses .button-primary class')">Button Primary</a>
-					<a href="#buttons" class="button-secondary" onclick="javascript:alert('This button uses .button-secondary class')">Button Secondary</a>
-					<a href="#buttons" class="button-alert" onclick="javascript:alert('This button uses .button-alert class')">Button Alert</a>
-					<a href="#buttons" class="button-warning" onclick="javascript:alert('This button uses .button-warning class')">Button Warning</a>
-				</div>
-				<div class="add-bottom">			
-					<h5>With Icons</h5>
-					<a href="#buttons" class="button-primary" onclick="javascript:alert('This button uses .button-primary class')"><span class="icon-community"></span> Button Primary</a>
-					<a href="#buttons" class="button-secondary" onclick="javascript:alert('This button uses .button-secondary class')"><span class="icon-brain"></span> Button Secondary</a>
-				</div>
-			</div>
-			<hr>
-
-			<div class="doc-section" id="forms">
-				<h3>Forms</h3>
-				<p>Forms can be one of the biggest pains for web developers, but just use these dead simple styles and you should be good to go.</p>
 				<div class="row">
-					<form class="col-4">
-						<label for="regularInput">Regular Input</label>
-						<input type="text" id="regularInput">
-						<label for="regularTextarea">Regular Textarea</label>
-						<textarea id="regularTextarea"></textarea>
-						<label for="selectList">Select List</label>
-						<select id="selectList">
-							<option value="Option 1">Option 1</option>
-							<option value="Option 2">Option 2</option>
-							<option value="Option 3">Option 3</option>
-							<option value="Option 4">Option 4</option>
-						</select>
-						<fieldset>
-							<legend>Checkboxes</legend>
-							<label for="regularCheckbox">
-								<input type="checkbox" id="regularCheckbox" value="checkbox 1">
-								<span>Regular Checkbox</span>
-							</label>
-							<label for="secondRegularCheckbox">
-								<input type="checkbox" id="secondRegularCheckbox" value="checkbox 2">
-								<span>Regular Checkbox</span>
-							</label>
-						</fieldset>
-						<fieldset>
-							<legend>Radio Buttons</legend>
-							<label for="regularRadio">
-								<input type="radio" name="radios" id="regularRadio" value="radio 1">
-								<span>Regular Radio</span>
-							</label>
-							<label for="secondRegularRadio">
-								<input type="radio" name="radios" id="secondRegularRadio" value="radio 2">
-								<span>Regular Radio</span>
-							</label>
-						</fieldset>
-						<button type="submit">Submit Form</button>
-					</form>
+					<div class="col-5">Five</div>					
+					<div class="col-11">Eleven</div>
+				</div>
+				<div class="row">
+					<div class="col-6">Six</div>					
+					<div class="col-10">Ten</div>
+				</div>
+				<div class="row">
+					<div class="col-7">Seven</div>					
+					<div class="col-9">Nine</div>
+				</div>
+				<div class="row">
+					<div class="col-8">Eight</div>					
+					<div class="col-8">Eight</div>
+				</div>
+				<div class="row">
+					<div class="col-9">Nine</div>					
+					<div class="col-7">Seven</div>					
+				</div>
+				<div class="row">
+					<div class="col-10">Ten</div>
+					<div class="col-6">Six</div>					
+				</div>
+				<div class="row">
+					<div class="col-11">Eleven</div>
+					<div class="col-5">Five</div>
+				</div>
+				<div class="row">
+					<div class="col-12">Twelve</div>									
+					<div class="col-4">Four</div>					
+				</div>
+				<div class="row">
+					<div class="col-13">Thirteen</div>
+					<div class="col-3">Three</div>				
+				</div>
+				<div class="row">
+					<div class="col-14">Fourteen</div>
+					<div class="col-2">Two</div>
+				</div>
+				<div class="row">
+					<div class="col-15">Fifteen</div>
+					<div class="col-1">One</div>
+				</div>
+			</div>		
+
+			<h3>Large Item Grid</h3>
+			<p>These are examples of large items grids</p>
+			<div class="example-grid">
+        <div class="row">
+					<div class="one-quarter">Quarter</div>
+					<div class="one-quarter">Quarter</div>
+					<div class="one-quarter">Quarter</div>
+					<div class="one-quarter">Quarter</div>
+				</div>
+        <div class="row">
+					<div class="one-quarter">Quarter</div>
+					<div class="half">Half</div>
+					<div class="one-quarter">Quarter</div>
+				</div>
+				<div class="row">
+					<div class="one-quarter">Quarter</div>					
+					<div class="three-quarters">Three Quarters</div>
+				</div>
+				<div class="row">
+					<div class="one-third">Third</div>					
+					<div class="one-third">Third</div>
+					<div class="one-third">Third</div>					
+				</div>
+				<div class="row">
+					<div class="half">Half</div>					
+					<div class="half">Half</div>
 				</div>
 			</div>
-			<hr>
-			
-			
-			<div id="tables">
-				<h3>Tables</h3>
+		</div>
+		<hr>
 
-				<table border="0" cellpadding="0" cellspacing="0" class="full-width-table rounded add-bottom">
-				<tr>
-					<td>Time</td>
-					<td>An easy way to contact groups of people & organize their responses</td>
-					<td>123</td>
-				</tr>
-				<tr>
-					<td>Cash</td>
-					<td>An easy way to contact groups of people & organize their responses</td>
-					<td>456</td>
-				</tr>
-				<tr>
-					<td>Patience</td>
-					<td>An easy way to contact groups of people & organize their responses</td>
-					<td>789</td>
-				</tr>			
-				</table>				
-			
+		<div class="doc-section clearfix" id="boxes">
+			<h3>Responsive Boxes</h3>
+			<div class="boxes-outer">
+			   <div class="boxes-inner">
+				    <h4>Box #1</h4>
+				    <p>Ugh fixie butcher, cornhole Pinterest scenester banh mi Tonx retro salvia tousled <a href="#">cool link</a></p>
+				    
+			   </div>
 			</div>
-			<hr>
-
-
-			<div class="doc-section" id="mediaQueries">
-				<h3>Media Queries</h3>
-				<p>Skeleton uses a <strong>lot</strong> of media queries to serve the scalable grid, but also for the convenience of styling your site on different size screens. Skeleton's media queries are almost exclusively targeted at max and min widths rather than device sizes or orientations. The advantage of this is browsers and future mobile devices that don't map to exact set dimensions will still benefit from the styles. That being said, all of the queries were written to be optimal on Apple iOS devices. The built in media queries include:</p>
-				<ul class="square">
-					<li><strong>Smaller than 960</strong>: Smaller than the standard base grid</li>
-					<li><strong>Tablet Portrait</strong>: Between 768px and 959px</li>
-					<li><strong>All Mobile Sizes</strong>: Less than 767px</li>
-					<li><strong>Just Mobile Landscape</strong>: Between 480px and 767px</li>
-					<li><strong>Just Mobile Portrait</strong>: Less than 479px</li>
-				</ul>
+			<div class="boxes-outer">
+			   <div class="boxes-inner">
+				    <h4>Box #2</h4>
+				    <p>Narwhal DIY salvia Blue Bottle, Schlitz locavore cray Pinterest Bushwick chia.</p>
+				    <p><a href="#" class="bottom">Bottom</a></p>
+			   </div>
 			</div>
-
-
-			<!-- Color Palate
-			================================================== -->
-			<div class="doc-section" id="colorPalate">
-				<h3>Color Palate</h3>
-				<p>Click square to copy HEX color value to clipboard</p>
-
-				<div class="color-palate-item" style="background-color:#005283">
-					@blueDarkest
-				</div>
-				<div class="color-palate-item" style="background-color:#3d6088">
-					@blueDarker
-				</div>
-				<div class="color-palate-item" style="background-color:#006daf">
-					@blueDark
-				</div>
-				<div class="color-palate-item" style="background-color:#41c2ff">
-					@blue
-				</div>
-				<div class="color-palate-item" style="background-color:#99d9ff">
-					@blueLight
-				</div>
-				<div class="color-palate-item" style="background-color:#92a3bf">
-					@grayLight
-				</div>
-				<div class="color-palate-item" style="background-color:#8596b3">
-					@gray
-				</div>
-				<div class="color-palate-item" style="background-color:#7f90ac">
-					@grayDark
-				</div>
-				<div class="color-palate-item" style="background-color:#C94D35">
-					@red
-				</div>
-				<div class="color-palate-item" style="background-color:#713c2a">
-					@redBorder
-				</div>
-				<div class="color-palate-item" style="background-color:#9e6727">
-					@orange
-				</div>
-				<div class="color-palate-item" style="background-color:#826f69">
-					@brown
-				</div>
-				<div class="color-palate-item" style="background-color:#7ba2a7">
-					@greenDark
-				</div>
-				<div class="color-palate-item" style="background-color:#abc78a">
-					@green
-				</div>
-				<div id="color-palate-copy"></div>
+			<div class="boxes-outer">
+			   <div class="boxes-inner">
+				    <h4>Box #3</h4>
+				    <p>Carles artisan try-hard, Helvetica letterpress swag umami flexitarian lo-fi seitan</p>
+				    <p><a href="#" class="bottom right">Link Right</a></p>
+			   </div>
 			</div>
+			<div class="boxes-outer">
+			   <div class="boxes-inner">
+				    <h4>Box #4</h4>
+				    <p>Asymmetrical pork belly VHS. Pickled XOXO Pitchfork paleo pork belly.</p>
+			   </div>
+			</div>
+			<div class="boxes-outer">
+			   <div class="boxes-inner">
+				    <h4>Box #5</h4>
+				    <p>Asymmetrical hoodie plaid, YOLO occupy slow-carb. Wolf McSweeney's pickled fashion axe</p>
+			   </div>
+			</div>
+			<div class="boxes-outer">
+			   <div class="boxes-inner">
+				    <h4>Box #6</h4>
+				    <p>Squid asymmetrical chambray fap flexitarian tousled vegan.</p>
+			   </div>
+			</div>
+			<div class="boxes-outer">
+			   <div class="boxes-inner">
+				    <h4>Box #7</h4>
+				    <p> Trust fund chillwave ugh American Apparel Bushwick food truck kitsch.</p>
+			   </div>
+			</div>			
+			<div class="boxes-outer">
+			   <div class="boxes-inner">
+				    <h4>Box #8</h4>
+				    <p>Pinterest plaid quinoa. Vice literally pour-over chambray VHS freegan. Quinoa Cosby</p>
+			   </div>
+			</div>
+			<div class="boxes-outer">
+			   <div class="boxes-inner">
+				    <h4>Box #9</h4>
+				    <p>Blog before they sold out 8-bit, food truck roof party slow-carb Vice Neutra bicycle rights. Fap hashtag lo-fi, banh mi</p>
+			   </div>
+			</div>
+			<div class="boxes-outer">
+			   <div class="boxes-inner">
+				    <h4>Box #10</h4>
+				    <p>Bicycle rights Austin sustainable Marfa, cardigan pickled raw denim Intelligentsia street art Neutra distillery Banksy Truffaut.</p>
+			   </div>
+			</div>
+			<div class="boxes-outer">
+			   <div class="boxes-inner">
+				    <h4>Box #11</h4>
+				    <p>Tofu lo-fi food truck drinking vinegar gastropub, Wes Anderson keffiyeh fingerstache flexitarian sartorial chia kogi. Wayfarers umami you probably haven't heard of them four loko pour-over mumblecore, occupy post-ironic normcore.</p>
+			   </div>
+			</div>
+		</div>
+		<hr>
+
+		<div class="doc-section clearfix" id="typography">
+			<h3>Typography</h3>
+			<p>The typography of Rebar is designed to create a strong hierarchy with basic styles. The primary font is Open Sans, but the font stack can be easily changed with just a couple adjustments. Regular paragraphs are set at a 14px base with 21px line height.</p>
+			<div class="row">
+				<div class="col-7 headings">
+					<h1>Heading &lt;h1&gt;</h1>
+					<h2>Heading &lt;h2&gt;</h2>
+					<h3>Heading &lt;h3&gt;</h3>
+					<h4>Heading &lt;h4&gt;</h4>
+					<h5>Heading &lt;h5&gt;</h5>
+					<h6>Heading &lt;h6&gt;</h6>
+				</div>
+				<div class="col-5">
+					<blockquote>
+						<p>This is a blockquote style example. It stands out, and it is awesome!</p>
+						<cite>Brennan Noval, Rebar Creator</cite>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+		<hr>
+
+		<div class="doc-section clearfix" id="lists">
+			<h3>Lists</h3>
+			<p>The list elements in Rebar are designed to create a strong hierarchy with basic styles.</p>
+			<div class="row add-top remove-bottom">
+				<div class="col-5">
+					<ul>
+					  <li>Unordered Item</li>
+						<li>Unordered Item</li>
+						<li>Unordered Item</li>
+						<li>Unordered Item</li>
+					</ul>				
+					<ol>
+						<li>Ordered Item</li>
+						<li>Ordered Item</li>
+						<li>Ordered Item</li>
+						<li>Ordered Item</li>
+					</ol>
+				</div>
+				<div class="col-5">
+					<ul class="square">
+					  <li>Bottle Rocket</li>
+						<li>Rushmore</li>
+						<li>The Royal Tenebaums</li>
+						<li>Life Aquatic w/ Steve Zissou</li>
+					</ul>
+					<ul class="circle">
+						<li>Darjeeling Limited</li>
+						<li>Fantastic Mr. Fox</li>
+						<li>Moonrise Kingdom</li>
+						<li>The Grand Budapest Hotel</li>
+					</ul>
+				</div>				
+			</div>
+      <div class="row">
+			<p>You can also make a larger text version by appending the <span class="pre">.large</span> class to the <span class="pre">ul, ol</span> lists</p>
+			<ul class="large remove-bottom">
+			  <li>Large Item</li>
+			  <li>Large Item</li>
+			  <li>Large Item</li>
+			</ul>
+      </div>
+		</div>
+		<hr>
+
+		<div class="doc-section" id="buttons">
+			<h3>Buttons</h3>
+			<p>Buttons are intended for action and thus should have appropriate weight. The standard button is given that weight with a little bit of depth and a strong hover.</p>
+			<div class="add-bottom">
+				<h5>Normal</h5>
+				<a href="#buttons" class="button-primary" onclick="javascript:alert('This button uses .button-primary class')">Button Primary</a>
+				<a href="#buttons" class="button-secondary" onclick="javascript:alert('This button uses .button-secondary class')">Button Secondary</a>
+				<a href="#buttons" class="button-alert" onclick="javascript:alert('This button uses .button-alert class')">Button Alert</a>
+				<a href="#buttons" class="button-warning" onclick="javascript:alert('This button uses .button-warning class')">Button Warning</a>
+			</div>
+			<div class="add-bottom">			
+				<h5>With Icons</h5>
+				<a href="#buttons" class="button-primary" onclick="javascript:alert('This button uses .button-primary class')"><span class="icon-community"></span> Button Primary</a>
+				<a href="#buttons" class="button-secondary" onclick="javascript:alert('This button uses .button-secondary class')"><span class="icon-brain"></span> Button Secondary</a>
+			</div>
+		</div>
+		<hr>
+
+		<div class="doc-section" id="forms">
+			<h3>Forms</h3>
+			<p>Forms can be one of the biggest pains for web developers, but just use these dead simple styles and you should be good to go.</p>
+			<div class="row">
+				<form class="col-4 standard">
+					<label for="regularInput">Regular Input</label>
+					<input type="text" id="regularInput" placeholder="Placeholder">
+					<label for="regularTextarea">Regular Textarea</label>
+					<textarea id="regularTextarea" placeholder="Placeholder text..."></textarea>
+					<label for="selectList">Select List</label>
+					<select id="selectList">
+						<option value="Option 1">Option 1</option>
+						<option value="Option 2">Option 2</option>
+						<option value="Option 3">Option 3</option>
+						<option value="Option 4">Option 4</option>
+					</select>
+					<fieldset>
+						<legend>Checkboxes</legend>
+						<label for="regularCheckbox">
+							<input type="checkbox" id="regularCheckbox" value="checkbox 1">
+							<span>Regular Checkbox</span>
+						</label>
+						<label for="secondRegularCheckbox">
+							<input type="checkbox" id="secondRegularCheckbox" value="checkbox 2">
+							<span>Regular Checkbox</span>
+						</label>
+					</fieldset>
+					<fieldset>
+						<legend>Radio Buttons</legend>
+						<label for="regularRadio">
+							<input type="radio" name="radios" id="regularRadio" value="radio 1">
+							<span>Regular Radio</span>
+						</label>
+						<label for="secondRegularRadio">
+							<input type="radio" name="radios" id="secondRegularRadio" value="radio 2">
+							<span>Regular Radio</span>
+						</label>
+					</fieldset>
+					<button type="submit">Submit Form</button>
+				</form>
+			</div>
+		</div>
+		<hr>
+		
+		
+		<div id="tables">
+			<h3>Tables</h3>
+			<table border="0" cellpadding="0" cellspacing="0" class="full-width-table rounded add-bottom">
+			<tr>
+				<td>Time</td>
+				<td>An easy way to contact groups of people & organize their responses</td>
+				<td>123</td>
+			</tr>
+			<tr>
+				<td>Cash</td>
+				<td>An easy way to contact groups of people & organize their responses</td>
+				<td>456</td>
+			</tr>
+			<tr>
+				<td>Patience</td>
+				<td>An easy way to contact groups of people & organize their responses</td>
+				<td>789</td>
+			</tr>			
+			</table>
+		</div>
+		<hr>
+
+		<div class="doc-section" id="mediaQueries">
+			<h3>Media Queries</h3>
+			<p>Rebar uses a <strong>lot</strong> of media queries to serve the scalable grid, but also for the convenience of styling your site on different size screens. Rebar's media queries are almost exclusively targeted at max and min widths rather than device sizes or orientations. The advantage of this is browsers and future mobile devices that don't map to exact set dimensions will still benefit from the styles. That being said, all of the queries were written to be optimal on Apple iOS devices. The built in media queries include:</p>
+			<ul class="square">
+				<li><strong>Web (max)</strong>: Smaller than the standard base grid 1140px</li>
+				<li><strong>Web (normal)</strong>: Smaller than the standard base grid 960px</li>
+				<li><strong>Tablet (landscape)</strong>: Between 768px and 959px</li>
+				<li><strong>Tablet (portrait)</strong>: Between 768px and 959px</li>
+				<li><strong>Mobile (all sizes)</strong>: Less than 767px</li>
+				<li><strong>Mobile (landscape)</strong>: Between 480px and 767px</li>
+				<li><strong>Mobile (potrait)</strong>: Less than 479px</li>
+			</ul>
+		</div>
+		<hr>
+
+		<!-- Color Palate
+		================================================== -->
+		<div class="doc-section" id="colorPalate">
+			<h3>Color Palate</h3>
+			<p>Click square to see HEX value for easier copying</p>
+
+			<div class="color-palate-item" style="background-color:#FFFFFF">
+        @white
+			</div>
+			<div class="color-palate-item" style="background-color:#333333">
+				<span style="color:white">@black</span>
+			</div>
+			<div id="color-palate-copy"></div>
+		</div>
 			
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

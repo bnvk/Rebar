@@ -16,12 +16,22 @@
 	@orange: #F38B00;
 	@red: #B50606;
 
+
+/* Body */
+
+	@body-background-color: #ffffff;
+	@body-background-image: ~'';
+	@body-background-repeat: ~'';
+	@body-background-position: ~'';
+
+
 /* Container */
 
 	@container-desktop-max-width: 1140px;
 	@container-desktop-width: 960px;
 	@container-tablet-width: 768px;
 	@container-mobile-width: 420px;
+
 
 /* Margins, Paddings, and Spacings */
 
@@ -30,22 +40,6 @@
 	@base-margin-bottom: @base-margin * 1.5;
 	@base-padding: 20px;
 	@base-border-radius: 4px;
-
-/* Grid */
-
-  @grid-row-margin-bottom: 20px;
-	@grid-gutter: 1%;
-	@grid-column-count: 16;
-
-	@grid-tablet-width: 100%;	
-	@grid-mobile-width: 100%;
-
-/* Body */
-
-	@body-background-color: #ffffff;
-	@body-background-image: ~'';
-	@body-background-repeat: ~'';
-	@body-background-position: ~'';
 
 
 /* Text */
@@ -78,6 +72,7 @@
   @pre-font-family: 'Courier';
   @pre-font-size: 14px;
   @pre-font-weight: bold;
+
 
 /* Links */
 	
@@ -124,13 +119,15 @@
 
 /* Lists */
 
-	@list-margin: '15px';
-	@list-padding: '0px';
-	@list-item-margin: '10px';
-	@list-item-padding: '5px';
+	@list-margin-bottom: 40px;
+	@list-margin-left: 30px;
+	@list-padding: 0px;
+  @list-font-size: @text-font-size;
+  @list-line-height: @text-font-size;	
+	@list-item-margin: 15px;
+	@list-item-padding: 5px;
 	@list-item-type-ordered: decimal outside;
 	@list-item-type-unordered: square outside;
-
 
 /* Separators */
 
@@ -141,7 +138,7 @@
 	
 	@hr-border-type: solid;
 	@hr-border-color: @black;
-	@hr-border-width: 1px 0 0;
+	@hr-border-width: 1px;
 	@hr-border-margin: 45px 0;
 	
 
@@ -167,15 +164,15 @@
 		box-sizing: border-box;
 
 		// Select
-	    -webkit-user-select:none;
-	    -moz-user-select:none;
-	    -ms-user-select:none;
-	    user-select:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 	    
-	    // Animate
-	    -webkit-transition-duration: 0.2s;
-	    -moz-transition-duration: 0.2s;
-	    transition-duration: 0.2s;	    
+    // Animate
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;	    
 	}
 
 	.button-border(@border-color) {
@@ -184,17 +181,17 @@
 		border-top: 1px solid (@border-color + #222222);
 		border-left: 1px solid (@border-color + #222222);
 
+		border-radius: 4px;
 		-moz-border-radius: 4px;
 		-webkit-border-radius: 4px;
-		border-radius: 4px;
 	}
 
 	.button-background(@color-top: #666666, @color-bottom: #333333) {
 
-	    background: @color-top;
-	    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-	    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-	    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: @color-top;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 	}
 
 	@button-primary-top: @blue;
@@ -264,6 +261,24 @@
 
 	@table-td-border-top: 1px solid @green;
 	@table-line-height: 18px;
+
+
+/* Grid */
+
+  @grid-row-margin-bottom: 20px;
+	@grid-gutter: 1%;
+	@grid-column-count: 16;
+
+	@grid-tablet-width: 100%;	
+	@grid-mobile-width: 100%;
+
+
+/* Boxes */
+
+  @boxes-padding: 15px;
+  @boxes-header-font-size: 24px;
+  @boxes-paragraph-font-size: 14px;
+  @boxes-link-color: @gray;
 
 
 /* Messages */
