@@ -1,18 +1,57 @@
 /* #Lists
 ================================================== */
 
-	ul, ol {
-		margin: @list-margin;
-		padding: @list-padding;
+	ul {
+	  margin-bottom: @list-margin-bottom;
+	  padding: @list-padding;
+	  list-style: none outside;
+  }
+
+	ol {
+	  margin-bottom: @list-margin-bottom;
+	  padding: @list-padding;
+    list-style: decimal;
+  }
+
+	ol, ul.square, ul.circle, ul.disc {
+	  margin-bottom: @list-margin-bottom;
+	  margin-left: @list-margin-left;
+  }
+
+	ul.square {
+	  list-style: square outside;
+  }
+
+	ul.circle {
+	  list-style: circle outside;
 	}
-	
-	ul li, ol li {
-		margin: @list-item-margin;
-		padding: @list-item-padding;
+
+	ul.disc {
+	  list-style: disc outside;
 	}
-	
-	ul li {
-		list-style-type: @list-item-type;
+
+	ul ul, ul ol,
+	ol ol, ol ul {
+	  margin-bottom: @list-margin-bottom;
+	  margin-left: @list-margin-left;
+  }
+
+	ul ul li, ul ol li,
+	ol ol li, ol ul li {
+	  margin-bottom: @list-item-margin;
+	  line-height: @list-line-height;
+  }
+
+	li {
+	  margin-bottom: @list-item-margin;
+	  line-height: @list-line-height;
+  }
+
+  ul li p,
+	ul.large li,
+	ol.large li {
+	  font-size: @list-font-size * 1.5;
+	  line-height: @list-line-height * 1.5;
 	}
 
 	ul.horizontal li, ol.horizontal li {
