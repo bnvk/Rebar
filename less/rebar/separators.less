@@ -1,21 +1,31 @@
-/* Lines */
-	
+/* Separators
+================================================== */
+
 	hr {
 		border: @hr-border-type @hr-border-color; 
-		border-width: @hr-border-width; 
+		border-width: @hr-border-width 0 0; 
 		clear: both; 
 		margin: @hr-border-margin; 
 		height: 0;
 	}
-	
+
 	hr.medium {
 		border: none;
-		height: 4px;
-		background: #000;
+		height: @hr-border-width * 2;
+		margin: @hr-border-margin;
+		background: @hr-border-color;
 	}
 	
 	hr.large {
 		border: none;
-		height: 8px;
-		background: #000;
+		height: @hr-border-width * 4;
+		margin: @hr-border-margin;
+		background: @hr-border-color;
+	}
+
+	hr.giant {
+		border: none;
+		height: @hr-border-width * 8;
+		margin: @hr-border-margin;
+		background: @hr-border-color;
 	}
