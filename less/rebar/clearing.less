@@ -1,44 +1,47 @@
-
 /* --- Clearing --- */
 
-.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+  .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
 
 /* Clearfix helper */
 
-.clearfix {
-  zoom: 1;
-  &:before, &:after {
-    content: "";
-    display: table;
+  .clearfix {
+    zoom: 1;
+    &:before, &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
   }
-  &:after {
-    clear: both;
-  }
-}
+
 
 /* Vertical Margins & Padding */
 
-.remove-top		  { margin-top: 0 !important; }
-.half-top		    { margin-top: 10px !important; }
-.add-top		    { margin-top: 45px !important; }
+  .remove-top		  { margin-top: 0 !important; }
+  .half-top		    { margin-top: 10px !important; }
+  .add-top		    { margin-top: 45px !important; }
+  
+  .remove-bottom	{ margin-bottom: 0 !important; }
+  .half-bottom	  { margin-bottom: 10px !important; }
+  .add-bottom		  { margin-bottom: 45px !important; }
 
-.remove-bottom	{ margin-bottom: 0 !important; }
-.half-bottom	  { margin-bottom: 10px !important; }
-.add-bottom		  { margin-bottom: 45px !important; }
 
 /* Centering */
 
-.left			  { float: left; }
-.center			{ margin-left: auto; margin-right: auto; }
-.right			{ float: right; }
+  .left			  { float: left; }
+  .center			{ margin-left: auto; margin-right: auto; }
+  .right			{ float: right; }
+  
+  .verticle-middle{ display: inline-table !important; vertical-align: middle; }
+  
+  .text-left		{ text-align: left; }
+  .text-center	{ text-align: center; }
+  .text-right 	{ text-align: right; }
 
-.verticle-middle{ display: inline-table !important; vertical-align: middle; }
-
-.text-left		{ text-align: left; }
-.text-center	{ text-align: center; }
-.text-right 	{ text-align: right; }
 
 /* Hide */
 
-.hide			    { display: none; }
+  .hide			    { display: none; }
 
