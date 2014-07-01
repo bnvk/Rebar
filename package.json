@@ -1,11 +1,11 @@
 {
   "name": "Rebar",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "author": "Brennan Novak <hi@brennannovak.com>",
   "contributors":[
     { "name": "Edward Hotchkiss", "github": "http://github.com/edwardhotchkiss/" }
   ],
-  "description": "Jumpstart your application with responsive HTML5, CSS3, SVG, and Webfonts",
+  "description": "A lightweight HTML5 / CSS3 framework for making responsive websites, built using the LESS preprocessor",
   "homepage": "https://github.com/brennannovak/Rebar/",
   "bugs": {
     "url": "https://github.com/brennannovak/Rebar/issues"

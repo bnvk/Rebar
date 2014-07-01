@@ -1,0 +1,98 @@
+/**
+ * @name Rebar Rectangles
+ * @description
+ *   - web max 1140
+ *   - web 960
+ *   - tablet
+ *   - mobile
+ */
+
+.rectangles-outer { position: relative; float: left; display: block; }
+.rectangles-inner h1,
+.rectangles-inner h2,
+.rectangles-inner h3,
+.rectangles-inner h4  { font-size: @rectangles-header-font-size; margin-bottom: @rectangles-padding; }
+.rectangles-inner p   { font-size: @rectangles-paragraph-font-size; }
+.rectangles-inner p a { font-size: @rectangles-paragraph-font-size; color: @rectangles-link-color; }
+.rectangles-inner a.bottom { position: absolute; bottom: @rectangles-padding; }
+.rectangles-inner a.bottom.right { right: @rectangles-padding; }
+
+/* --- LESS mixin to generate multiple sizes --- */
+.rectangles(@blocks, @width, @margin-right, @margin-bottom) {
+
+    .rectangles-outer {
+    	width: @width;
+      height: @rectangles-height;
+    	margin-right: @margin-right;
+    	margin-bottom: @margin-bottom;
+    }
+
+    @nth1: @blocks + 1;
+    @nth2: (@blocks * 2) + 1;
+    @nth3: (@blocks * 3) + 1;
+    @nth4: (@blocks * 4) + 1;
+    @nth5: (@blocks * 5) + 1;
+    @nth6: (@blocks * 6) + 1;
+    @nth7: (@blocks * 7) + 1;
+    @nth8: (@blocks * 8) + 1;
+    @nth9: (@blocks * 9) + 1;
+    @nth10: (@blocks * 10) + 1;
+
+    .rectangles-outer:nth-child(@{nth1}), 
+    .rectangles-outer:nth-child(@{nth2}),
+    .rectangles-outer:nth-child(@{nth3}),
+    .rectangles-outer:nth-child(@{nth4}),
+    .rectangles-outer:nth-child(@{nth5}),
+    .rectangles-outer:nth-child(@{nth6}),
+    .rectangles-outer:nth-child(@{nth7}),
+    .rectangles-outer:nth-child(@{nth8}),
+    .rectangles-outer:nth-child(@{nth9}),
+    .rectangles-outer:nth-child(@{nth10}) {
+      margin-right: 0px;
+    }
+
+    .rectangles-inner {
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      bottom: 1px;
+      right: 1px;
+      padding: @rectangles-padding;
+      overflow: hidden;
+    }
+}
+
+/* Five Column, 1140 web max  */
+@media only screen and (min-width: 1140px) {
+  .container {
+    .rectangles(5, 19.1%, 1.1%, 1.2%);
+  }
+}
+
+/* Four Column, 960 web */
+@media only screen and (min-width: 960px) and (max-width: 1139px) {
+  .container {
+    .rectangles(4, 23.1%, 2.25%, 2%);
+  }
+}
+
+/* Three Column, tablet landscape  */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    .rectangles(3, 31.25%, 2.75%, 2.25%);
+  }
+}
+
+/* Two Column, mobile portrait & landscape */
+@media only screen and (max-width: 767px) {
+  .container {
+    .rectangles(2, 48.5%, 3%, 3%);
+  }
+}
+
+/* Two Column, mobile portrait */
+@media only screen and (max-width: 480px) {
+  .container {
+    .rectangles(1, 100%, 4%, 2%);
+  }
+}
