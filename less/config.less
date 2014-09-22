@@ -7,7 +7,7 @@
 	@white: #FFFFFF;
 	@black: #333333;
 	@gray: #b7bfc8;
-	@grayLight: #D7D7D7;
+	@grayLight: #E6E6E6;
 	@grayDark: #656E77;
 	@blue: #0A87BF;	
 	@brown: #826f69;
@@ -119,15 +119,16 @@
 
 /* Lists */
 
-	@list-margin-bottom: 40px;
-	@list-margin-left: 30px;
+	@list-margin: 0 0 (@base-margin * 2) (@base-margin * 2);
 	@list-padding: 0px;
   @list-font-size: @text-font-size;
-  @list-line-height: @text-font-size;	
+  @list-line-height: @text-font-size;
 	@list-item-margin: 15px;
 	@list-item-padding: 5px;
-	@list-item-type-ordered: decimal outside;
-	@list-item-type-unordered: square outside;
+
+	@unordered-list-type: square outside;
+	@ordered-list-type: decimal outside;
+
 
 /* Separators */
 
@@ -135,12 +136,12 @@
 	@blockquote-font-style: italic;
 	@blockquote-line-height: 24px;
 	@blockquote-color: #666666;
-	
+
 	@hr-border-type: solid;
 	@hr-border-color: @black;
 	@hr-border-width: 1px;
 	@hr-border-margin: 45px 0;
-	
+
 
 /* Buttons */
 

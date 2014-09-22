@@ -1,39 +1,42 @@
 /* #Lists
 ================================================== */
 
-	ul {
-	  margin-bottom: @list-margin-bottom;
+	ul, ol {
+	  margin: @list-margin;
 	  padding: @list-padding;
-	  list-style: none outside;
+  }
+
+  ul {
+	  list-style: @unordered-list-type;
   }
 
 	ol {
-	  margin-bottom: @list-margin-bottom;
-	  padding: @list-padding;
-    list-style: decimal;
+	  list-style: @ordered-list-type;
   }
 
-	ol, ul.square, ul.circle, ul.disc {
-	  margin-bottom: @list-margin-bottom;
-	  margin-left: @list-margin-left;
+  ul.square, ul.circle, ul.disc,
+  ol.square, ol.circle, ol.disc {
+	  margin: @list-margin;
   }
 
-	ul.square {
+	ul.square,
+  ol.square {
 	  list-style: square outside;
   }
 
-	ul.circle {
+	ul.circle,
+  ol.square {
 	  list-style: circle outside;
 	}
 
-	ul.disc {
+	ul.disc,
+  ol.disc {
 	  list-style: disc outside;
 	}
 
 	ul ul, ul ol,
 	ol ol, ol ul {
-	  margin-bottom: @list-margin-bottom;
-	  margin-left: @list-margin-left;
+	  margin: @list-margin;
   }
 
 	ul ul li, ul ol li,
@@ -54,7 +57,18 @@
 	  line-height: @list-line-height * 1.5;
 	}
 
+  ul li p,
+	ul.small li,
+	ol.small li {
+	  font-size: @list-font-size * .80;
+	  line-height: @list-line-height * .80;
+	}
+
+  ul.horizontal,
+  ol.horizontal {
+    margin: 0;
+  }
+
 	ul.horizontal li, ol.horizontal li {
 		display: inline-block;	
-  	float: left;
 	}
