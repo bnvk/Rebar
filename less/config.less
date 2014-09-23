@@ -145,19 +145,20 @@
 
 /* Buttons */
 
-	.button-globals(@color: #eeeeee, @shadow: 1px 1px 1px #333333) {
+	.button-global(@color, @text-shadow, @font-family, @font-size, @font-weight, @margin, @padding) {
 
 		// Font
 		color: @color !important;
-		font-family: @text-font-family-semibold !important;	
-		font-size: 16px;
-		font-weight: normal !important;
-		line-height: normal;
-		text-shadow: @shadow; 		
+		font-family: @font-family !important;
+		font-size: @font-size !important;
+		font-weight: @font-weight !important;
+		line-height: inherit;
+		text-shadow: @text-shadow;
 		text-decoration: none;
 
 		// Display
-		padding: 5px 15px;
+    margin: @margin;
+		padding: @padding;
 		display: inline-block;
 		cursor: pointer;
 		-webkit-box-sizing: border-box;
@@ -169,67 +170,113 @@
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
-	    
+
     // Animate
     -webkit-transition-duration: 0.2s;
     -moz-transition-duration: 0.2s;
-    transition-duration: 0.2s;	    
+    transition-duration: 0.2s;
 	}
 
-	.button-border(@border-color) {
+	.button-colors(@border-color, @background) {
 
-		border: 1px solid @border-color, ;
+		border: 1px solid @border-color;
 		border-top: 1px solid (@border-color + #222222);
 		border-left: 1px solid (@border-color + #222222);
 
 		border-radius: 4px;
 		-moz-border-radius: 4px;
 		-webkit-border-radius: 4px;
-	}
 
-	.button-background(@color-top: #666666, @color-bottom: #333333) {
-
-    background: @color-top;
+    background: @background;
+    // box-shadow: inset 0 -.2em rgba(0,0,0,.3);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button-colors-hover(@border-color, @background) {
+    border-color: @border-color;
+    background-color: @background;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 	}
 
-	@button-primary-top: @blue;
-	@button-primary-top-hover: darken(@button-primary-top, 12%);
-	@button-primary-bottom: @blue;
-	@button-primary-bottom-hover: darken(@button-primary-bottom, 12%);
-	@button-primary-color: @white;
-	@button-primary-shadow: @text-shadow-on-dark;
-	@button-primary-border: @blue;
-	@button-primary-border-hover: @blue;
-	
-	@button-secondary-top: @green;
-	@button-secondary-top-hover: darken(@button-secondary-top, 20%);
-	@button-secondary-bottom: @green;
-	@button-secondary-bottom-hover: darken(@button-secondary-bottom, 20%);
-	@button-secondary-color: @white;
-	@button-secondary-shadow: @text-shadow-on-dark;
-	@button-secondary-border: #7ba2a7;
-	@button-secondary-border-hover: @blue;
+  .button-colors-active(@border-color, @background) {
+    border-color: @border-color;
+    background-color: @background;
+    box-shadow: inset 0 .17em .1em rgba(0, 0, 0, 0.3);
+  }
 
-	@button-alert-top: @brown;
-	@button-alert-top-hover: darken(@button-alert-top, 20%);
-	@button-alert-bottom: @brown;
-	@button-alert-bottom-hover: darken(@button-alert-bottom, 20%);
-	@button-alert-color: @white;
-	@button-alert-shadow: @text-shadow-on-dark;
-	@button-alert-border: #8596b3;
-	@button-alert-border-hover: @blue;
+  @btn-color: @white;
+  @btn-font-family: @text-font-family-semibold;
+  @btn-font-size: 16px;
+  @btn-font-weight: bold;
+  @btn-margin: 0px;
+  @btn-padding: 5px 15px;
 
-	@button-warning-top: @red;
-	@button-warning-top-hover: darken(@button-warning-top, 20%);
-	@button-warning-bottom: @red;
-	@button-warning-bottom-hover: darken(@button-warning-bottom, 20%);
-	@button-warning-color: @white;
-	@button-warning-shadow: @text-shadow-on-dark;
-	@button-warning-border: #713c2a;
-	@button-warning-border-hover: @blue;
+  @btn-small-font-size: 12px;
+  @btn-small-font-weight: bold;
+  @btn-small-margin: @btn-margin;
+  @btn-small-padding: 2px 10px;
+
+
+/* Button - Primary */
+
+	@btn-primary-color: @white;
+	@btn-primary-text-shadow: @text-shadow-on-dark;
+	@btn-primary-background: @blue;
+	@btn-primary-background-hover: darken(@blue, 5%);
+  @btn-primary-background-active: darken(@blue, 5%);
+	@btn-primary-border-color: darken(@blue, 10%);
+	@btn-primary-border-color-hover: darken(@blue, 15%);
+  @btn-primary-border-color-active: darken(@blue, 15%);
+
+
+/* Button - Secondary */
+
+	@btn-secondary-color: @white;
+	@btn-secondary-text-shadow: @text-shadow-on-dark;
+	@btn-secondary-background: @green;
+	@btn-secondary-background-hover: darken(@green, 5%);
+  @btn-secondary-background-active: darken(@green, 5%);
+	@btn-secondary-border-color: darken(@green, 10%);
+	@btn-secondary-border-color-hover: darken(@green, 10%);
+  @btn-secondary-border-color-active: darken(@green, 10%);
+
+
+/* Button - Info */
+
+	@btn-info-color: @black;
+	@btn-info-text-shadow: 0px 0px 0px;
+	@btn-info-background: @grayLight;
+	@btn-info-background-hover: darken(@grayLight, 5%);
+  @btn-info-background-active: darken(@grayLight, 5%);
+	@btn-info-border-color: @gray;
+	@btn-info-border-color-hover: darken(@gray, 10%);
+  @btn-info-border-color-active: darken(@gray, 10%);
+
+
+/* Button - Alert */
+
+	@btn-alert-color: @white;
+	@btn-alert-text-shadow: @text-shadow-on-dark;
+	@btn-alert-background: @orange;
+	@btn-alert-background-hover: darken(@orange, 8%);
+	@btn-alert-background-active: darken(@orange, 5%);
+	@btn-alert-border-color: darken(@orange, 10%);
+	@btn-alert-border-color-hover: darken(@orange, 15%);
+	@btn-alert-border-color-active: darken(@orange, 12%);
+
+
+/* Button - Warning */
+
+	@btn-warning-color: @white;
+	@btn-warning-text-shadow: @text-shadow-on-dark;
+  @btn-warning-background: @red;
+	@btn-warning-background-hover: darken(@red, 7%);
+  @btn-warning-background-active: darken(@red, 5%);
+  @btn-warning-border-color: darken(@red, 10%);
+	@btn-warning-border-color-hover: darken(@red, 10%);
+  @btn-warning-border-color-active: darken(@red, 8%);
 
 
 /* Forms */

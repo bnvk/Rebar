@@ -8,93 +8,255 @@
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"] {
-		.button-globals(@button-primary-color, @button-primary-shadow);
-		.button-border(@button-primary-border);
-		.button-background(@button-primary-top, @button-primary-bottom);
+    .button-global(@btn-primary-color, @btn-primary-text-shadow, @btn-font-family, @btn-font-size, @btn-font-weight, @btn-margin, @btn-padding);
+		.button-colors(@btn-primary-border-color, @btn-primary-background);
 		text-decoration: none;
+    outline: none;
 	}
+	.button-small,
+	.button-small-primary,
+	button.button-small,
+	input[type="submit"].button-small,
+	input[type="reset"].button-small,
+	input[type="button"].button-small {
+    .button-global(@btn-primary-color, @btn-primary-text-shadow, @btn-font-family, @btn-small-font-size, @btn-small-font-weight, @btn-small-margin, @btn-small-padding);
+		.button-colors(@btn-primary-border-color, @btn-primary-background);
+		text-decoration: none;
+    outline: none;
+	}
+
 	.button:visited,
 	.button-primary:visited {
-		.button-globals(@button-primary-color, @button-primary-shadow);
-		.button-border(@button-primary-border);
-		.button-background(@button-primary-top, @button-primary-bottom);
+		.button-colors(@btn-primary-border-color, @btn-primary-background);
 		text-decoration: none;
+    outline: none;
 	}
 	.button:hover,
 	.button-primary:hover,
 	button:hover,
 	input[type="submit"]:hover,
 	input[type="reset"]:hover,
-	input[type="button"]:hover {
-		.button-border(@button-primary-border);	
-		.button-background(@button-primary-top-hover, @button-primary-bottom-hover);
+	input[type="button"]:hover,
+	.button-small:hover,
+	.button-small-primary:hover,
+	button.button-small:hover,
+	input[type="submit"].button-small:hover,
+	input[type="reset"].button-small:hover,
+	input[type="button"].button-small:hover {
+		.button-colors-hover(@btn-primary-border-color-hover, @btn-primary-background-hover);
 		text-decoration: none;
+    outline: none;
 	}
+
 	.button:active,
 	.button-primary:active,
+	.button-small-primary:active,
 	button:active,
 	input[type="submit"]:active,
 	input[type="reset"]:active,
-	input[type="button"]:active {	
-		.button-border(@button-primary-border-hover);
-		.button-background(@button-primary-top-hover, @button-primary-top-hover);
+	input[type="button"]:active,
+	.button-small:active,
+	.button-small-primary:active,
+	button.button-small:active,
+	input[type="submit"].button-small:active,
+	input[type="reset"].button-small:active,
+	input[type="button"].button-small:active {	
+		.button-colors-active(@btn-primary-border-color-active, @btn-primary-background-active);
 		text-decoration: none;
+    outline: none;
 	}
 
 
 	/* Secondary */
-	.button-secondary {
-		.button-globals(@button-secondary-color, @button-secondary-shadow);
-		.button-border(@button-secondary-border);
-		.button-background(@button-secondary-top, @button-secondary-bottom);
+	.button-secondary,
+	button.button-secondary,
+	input[type="submit"].button-secondary,
+	input[type="reset"].button-secondary,
+	input[type="button"].button-secondary {
+    .button-global(@btn-secondary-color, @btn-secondary-text-shadow, @btn-font-family, @btn-font-size, @btn-font-weight, @btn-margin, @btn-padding);
+		.button-colors(@btn-secondary-border-color, @btn-secondary-background);
 	}
-	.button-secondary:hover {
-		.button-border(@button-secondary-border-hover);	
-		.button-background(@button-secondary-top-hover, @button-secondary-bottom-hover);
-		text-decoration: none;
+  .button-small-secondary,
+	button.button-small-secondary,
+	input[type="submit"].button-small-secondary,
+	input[type="reset"].button-small-secondary,
+	input[type="button"].button-small-secondary {
+    .button-global(@btn-secondary-color, @btn-secondary-text-shadow, @btn-font-family, @btn-small-font-size, @btn-small-font-weight, @btn-small-margin, @btn-small-padding);
+		.button-colors(@btn-secondary-border-color, @btn-secondary-background);
 	}
-	.button-secondary:active {
-		.button-border(@button-secondary-border-hover);	
-		.button-background(@button-secondary-top-hover, @button-secondary-top-hover);
+
+	.button-secondary:hover,
+  .button-small-secondary:hover,
+  button.button-secondary:hover,
+  button.button-small-secondary:hover,
+	input[type="submit"].button-secondary:hover,
+	input[type="submit"].button-small-secondary:hover,
+	input[type="reset"].button-secondary:hover,
+	input[type="reset"].button-small-secondary:hover,
+	input[type="button"].button-secondary:hover,
+	input[type="button"].button-small-secondary:hover {
+		.button-colors-hover(@btn-secondary-border-color-hover, @btn-secondary-background-hover);
 		text-decoration: none;
+    outline: none;
+	}
+	.button-secondary:active,
+  .button-small-secondary:active,
+	button.button-secondary:focus,
+	button.button-small-secondary:focus,
+	input[type="submit"].button-secondary:focus,
+	input[type="submit"].button-small-secondary:focus,
+	input[type="reset"].button-secondary:focus,
+	input[type="reset"].button-small-secondary:focus,
+	input[type="button"].button-secondary:focus,
+	input[type="button"].button-small-secondary:focus {
+		.button-colors-active(@btn-secondary-border-color-active, @btn-secondary-background-active);
+		text-decoration: none;
+    outline: none;
+	}
+
+
+	/* Info */
+	.button-info,
+	button.button-info,
+	input[type="submit"].button-info,
+	input[type="reset"].button-info,
+	input[type="button"].button-info {
+    .button-global(@btn-info-color, @btn-info-text-shadow, @btn-font-family, @btn-font-size, @btn-font-weight, @btn-margin, @btn-padding);
+		.button-colors(@btn-info-border-color, @btn-info-background);
+	}
+  .button-small-info,
+	button.button-small-info,
+	input[type="submit"].button-small-info,
+	input[type="reset"].button-small-info,
+	input[type="button"].button-small-info {
+    .button-global(@btn-info-color, @btn-info-text-shadow, @btn-font-family, @btn-small-font-size, @btn-small-font-weight, @btn-small-margin, @btn-small-padding);
+		.button-colors(@btn-info-border-color, @btn-info-background);
+	}
+
+	.button-info:hover,
+  .button-small-info:hover,
+  button.button-info:hover,
+  button.button-small-info:hover,
+	input[type="submit"].button-info:hover,
+	input[type="submit"].button-small-info:hover,
+	input[type="reset"].button-info:hover,
+	input[type="reset"].button-small-info:hover,
+	input[type="button"].button-info:hover,
+	input[type="button"].button-small-info:hover {
+		.button-colors-hover(@btn-info-border-color-hover, @btn-info-background-hover);
+		text-decoration: none;
+    outline: none;
+	}
+	.button-info:active,
+  .button-small-info:active,
+	button.button-info:focus,
+	button.button-small-info:focus,
+	input[type="submit"].button-info:focus,
+	input[type="submit"].button-small-info:focus,
+	input[type="reset"].button-info:focus,
+	input[type="reset"].button-small-info:focus,
+	input[type="button"].button-info:focus,
+	input[type="button"].button-small-info:focus {
+		.button-colors-active(@btn-info-border-color-active, @btn-info-background-active);
+		text-decoration: none;
+    outline: none;
 	}
 
 
 	/* Alert */
-	.button-alert {
-		.button-globals(@button-alert-color, @button-alert-shadow);
-		.button-border(@button-alert-border);
-		.button-background(@button-alert-top, @button-alert-bottom);
+	.button-alert,
+  button.button-alert,
+	input[type="submit"].button-alert,
+	input[type="reset"].button-alert,
+	input[type="button"].button-alert {
+    .button-global(@btn-alert-color, @btn-alert-text-shadow, @btn-font-family, @btn-font-size, @btn-font-weight, @btn-margin, @btn-padding);
+		.button-colors(@btn-alert-border-color, @btn-alert-background);
 	}
-	.button-alert:hover {
-		.button-border(@button-alert-border-hover);	
-		.button-background(@button-alert-top-hover, @button-alert-bottom-hover);
-		text-decoration: none;
+	.button-small-alert,
+	button.button-small-alert,
+	input[type="submit"].button-small-alert,
+	input[type="reset"].button-small-alert,
+	input[type="button"].button-small-alert {
+    .button-global(@btn-alert-color, @btn-alert-text-shadow, @btn-font-family, @btn-small-font-size, @btn-small-font-weight, @btn-small-margin, @btn-small-padding);
+		.button-colors(@btn-alert-border-color, @btn-alert-background);
 	}
-	.button-alert:active {
-		.button-border(@button-alert-border-hover);	
-		.button-background(@button-alert-top-hover, @button-alert-top-hover);
+
+	.button-alert:hover,
+  .button-small-alert:hover,
+	button.button-alert:hover,
+	button.button-small-alert:hover,
+	input[type="submit"].button-alert:hover,
+	input[type="submit"].button-small-alert:hover,
+	input[type="reset"].button-alert:hover,
+	input[type="reset"].button-small-alert:hover,
+	input[type="button"].button-alert:hover,
+	input[type="button"].button-small-alert:hover {
+		.button-colors-hover(@btn-alert-border-color-hover, @btn-alert-background-hover);
 		text-decoration: none;
+    outline: none;
+	}
+	.button-alert:active,
+  .button-small-alert:active,
+  button.button-alert:focus,
+  button.button-small-alert:focus,
+	input[type="submit"].button-alert:focus,
+	input[type="submit"].button-small-alert:focus,
+	input[type="reset"].button-alert:focus,
+	input[type="reset"].button-small-alert:focus,
+	input[type="button"].button-alert:focus,
+	input[type="button"].button-small-alert:focus {
+		.button-colors-active(@btn-alert-border-color-active, @btn-alert-background-active);
+		text-decoration: none;
+    outline: none;
 	}
 
 
 	/* Warning */
-	.button-warning {
-		.button-globals(@button-warning-color, @button-warning-shadow);
-		.button-border(@button-warning-border);
-		.button-background(@button-warning-top, @button-warning-bottom);
+	.button-warning,
+  button.button-warning,
+	input[type="submit"].button-warning,
+	input[type="reset"].button-warning,
+	input[type="button"].button-warning {
+    .button-global(@btn-warning-color, @btn-warning-text-shadow, @btn-font-family, @btn-font-size, @btn-font-weight, @btn-margin, @btn-padding);
+		.button-colors(@btn-warning-border-color, @btn-warning-background);
 	}
-	.button-warning:hover {
-		.button-border(@button-warning-border-hover);
-		.button-background(@button-warning-top-hover, @button-warning-bottom-hover);
-		text-decoration: none;
-	}
-	.button-warning:active {
-		.button-border(@button-warning-border-hover);
-		.button-background(@button-warning-top-hover, @button-warning-top-hover);
-		text-decoration: none;
+	.button-small-warning,
+  button.button-small-warning,
+	input[type="submit"].button-small-warning,
+	input[type="reset"].button-small-warning,
+	input[type="button"].button-small-warning {
+    .button-global(@btn-warning-color, @btn-warning-text-shadow, @btn-font-family, @btn-small-font-size, @btn-small-font-weight, @btn-small-margin, @btn-small-padding);
+		.button-colors(@btn-warning-border-color, @btn-warning-background);
 	}
 
+	.button-warning:hover,
+  .button-small-warning:hover,
+  button.button-warning:hover,
+  button.button-small-warning:hover,
+	input[type="submit"].button-warning:hover,
+	input[type="submit"].button-small-warning:hover,
+	input[type="reset"].button-warning:hover,
+	input[type="reset"].button-small-warning:hover,
+	input[type="button"].button-warning:hover,
+	input[type="button"].button-small-warning:hover {
+		.button-colors-hover(@btn-warning-border-color-hover, @btn-warning-background-hover);
+		text-decoration: none;
+    outline: none;
+	}
+	.button-warning:active,
+  .button-small-warning:active,
+  button.button-warning:focus,
+  button.button-small-warning:focus,
+	input[type="submit"].button-warning:focus,
+	input[type="submit"].button-small-warning:focus,
+	input[type="reset"].button-warning:focus,
+	input[type="reset"].button-small-warning:focus,
+	input[type="button"].button-warning:focus,
+	input[type="button"].button-small-warning:focus {
+		.button-colors-active(@btn-warning-border-color-active, @btn-warning-background-active);
+		text-decoration: none;
+    outline: none;
+	}
 
 	/* Icons */
 	.button span,
@@ -103,7 +265,6 @@
 	.button-warning span, {
 		margin-right: 5px;
 	}
-
 
 	/* Full Width */
 	.button.full-width,
@@ -122,7 +283,6 @@
 		padding-right: 0 !important;
 		text-align: center;
 	}
-
 
 	/* Fix for odd Mozilla border & padding issues */
 	button::-moz-focus-inner,
