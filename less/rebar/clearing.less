@@ -20,13 +20,14 @@
 /* Vertical Margins & Padding */
 
   .remove-top		  { margin-top: 0 !important; }
-  .half-top		    { margin-top: 10px !important; }
-  .add-top		    { margin-top: 45px !important; }
-  
-  .remove-bottom	{ margin-bottom: 0 !important; }
-  .half-bottom	  { margin-bottom: 10px !important; }
-  .add-bottom		  { margin-bottom: 45px !important; }
+  .half-top		    { margin-top: (@base-margin / 2) !important; }
+  .add-top		    { margin-top: @base-margin !important; }
+  .double-top		  { margin-top: (@base-margin * 2) !important; }
 
+  .remove-bottom	{ margin-bottom: 0 !important; }
+  .half-bottom	  { margin-bottom: (@base-margin / 2) !important; }
+  .add-bottom		  { margin-bottom: @base-margin !important; }
+  .double-bottom  { margin-top: (@base-margin * 2) !important; }
 
 /* Centering */
 
@@ -39,6 +40,18 @@
   .text-left		{ text-align: left; }
   .text-center	{ text-align: center; }
   .text-right 	{ text-align: right; }
+
+  .middle { vertical-align: middle; }
+
+  .remove-right   { margin-right: 0px; }
+  .add-right      { margin-right: @base-margin; }
+  .add-right-half { margin-right: (@base-margin / 2); }
+  .add-right-double{ margin-left: (@base-margin * 2); }
+
+  .remove-left    { margin-left: 0px; }
+  .add-left       { margin-left: @base-margin; }
+  .add-left-half  { margin-left: (@base-margin / 2); }
+  .add-left-double{ margin-left: (@base-margin * 2); }
 
 
 /* Hide */
