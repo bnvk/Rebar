@@ -66,7 +66,7 @@
 	@pre-margin-bottom: 20px;
 	@pre-background: @grayLight;
   @pre-color: @black;
-  @pre-padding: 4px 8px;
+  @pre-padding: 2px 6px;
   @pre-border: 1px solid @gray;
   @pre-border-radius: 3px;
   @pre-font-family: 'Courier';
@@ -145,15 +145,13 @@
 
 /* Buttons */
 
-	.button-global(@color, @text-shadow, @font-family, @font-size, @font-weight, @margin, @padding) {
+	.button-global(@font-family, @font-size, @font-weight, @margin, @padding) {
 
 		// Font
-		color: @color !important;
 		font-family: @font-family !important;
 		font-size: @font-size !important;
 		font-weight: @font-weight !important;
 		line-height: inherit;
-		text-shadow: @text-shadow;
 		text-decoration: none;
 
 		// Display
@@ -161,37 +159,28 @@
 		padding: @padding;
 		display: inline-block;
 		cursor: pointer;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 
 		// Select
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
     user-select:none;
 
     // Animate
-    -webkit-transition-duration: 0.2s;
-    -moz-transition-duration: 0.2s;
     transition-duration: 0.2s;
 	}
 
-	.button-colors(@border-color, @background) {
+	.button-colors(@color, @text-shadow, @border-color, @background) {
+
+		color: @color !important;
+		text-shadow: @text-shadow;
 
 		border: 1px solid @border-color;
 		border-top: 1px solid (@border-color + #222222);
 		border-left: 1px solid (@border-color + #222222);
 
 		border-radius: 4px;
-		-moz-border-radius: 4px;
-		-webkit-border-radius: 4px;
 
     background: @background;
-    // box-shadow: inset 0 -.2em rgba(0,0,0,.3);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 0px 0px rgba(0, 0, 0, 0.2);
   }
   
   .button-colors-hover(@border-color, @background) {
@@ -250,7 +239,7 @@
 	@btn-info-background: @grayLight;
 	@btn-info-background-hover: darken(@grayLight, 5%);
   @btn-info-background-active: darken(@grayLight, 5%);
-	@btn-info-border-color: @gray;
+	@btn-info-border-color: darken(@gray, 5%);
 	@btn-info-border-color-hover: darken(@gray, 10%);
   @btn-info-border-color-active: darken(@gray, 10%);
 

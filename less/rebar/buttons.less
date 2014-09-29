@@ -1,262 +1,183 @@
 /* #Buttons
 ================================================== */
 
-	/* Primary */
-	.button,
-	.button-primary,
+	/* Global */
 	button,
+  button:hover,
+  button:active,
 	input[type="submit"],
+  input[type="submit"]:hover,
+  input[type="submit"]:active,
 	input[type="reset"],
-	input[type="button"] {
-    .button-global(@btn-primary-color, @btn-primary-text-shadow, @btn-font-family, @btn-font-size, @btn-font-weight, @btn-margin, @btn-padding);
-		.button-colors(@btn-primary-border-color, @btn-primary-background);
-		text-decoration: none;
-    outline: none;
-	}
-	.button-small,
-	.button-small-primary,
-	button.button-small,
-	input[type="submit"].button-small,
-	input[type="reset"].button-small,
-	input[type="button"].button-small {
-    .button-global(@btn-primary-color, @btn-primary-text-shadow, @btn-font-family, @btn-small-font-size, @btn-small-font-weight, @btn-small-margin, @btn-small-padding);
-		.button-colors(@btn-primary-border-color, @btn-primary-background);
-		text-decoration: none;
+  input[type="reset"]:hover,
+  input[type="reset"]:active,
+	input[type="button"],
+  input[type="button"]:hover,
+  input[type="button"]:active,
+	.button-primary,
+  .button-secondary,
+  .button-info,
+  .button-alert,
+  .button-warning {
+    .button-global(@btn-font-family, @btn-font-size, @btn-font-weight, @btn-margin, @btn-padding);
     outline: none;
 	}
 
-	.button:visited,
-	.button-primary:visited {
-		.button-colors(@btn-primary-border-color, @btn-primary-background);
+  a.button-primary,
+  a.button-primary:visited,
+  a.button-primary:hover,
+  a.button-secondary,
+  a.button-secondary:visited,
+  a.button-secondary:hover,
+  a.button-info,
+  a.button-info:visited,
+  a.button-info:hover,
+  a.button-alert,
+  a.button-alert:visited,
+  a.button-alert:hover,
+  a.button-warning,
+  a.button-warning:visited,
+  a.button-warning:hover {
 		text-decoration: none;
-    outline: none;
+  }
+
+	.button-small,
+	button.button-small,
+	input[type="submit"].button-small,
+	input[type="reset"].button-small,
+	input[type="button"].button-small, {
+    .button-global(@btn-font-family, @btn-small-font-size, @btn-small-font-weight, @btn-small-margin, @btn-small-padding);
 	}
-	.button:hover,
-	.button-primary:hover,
+
+
+  /* Primary */
+	button.button-primary,
+	input[type="submit"].button-primary,
+	input[type="reset"].button-primary,
+	input[type="button"].button-primary,
+  a.button-primary {
+		.button-colors(@btn-primary-color, @btn-primary-text-shadow, @btn-primary-border-color, @btn-primary-background);
+  }
+
 	button:hover,
 	input[type="submit"]:hover,
 	input[type="reset"]:hover,
 	input[type="button"]:hover,
-	.button-small:hover,
-	.button-small-primary:hover,
-	button.button-small:hover,
-	input[type="submit"].button-small:hover,
-	input[type="reset"].button-small:hover,
-	input[type="button"].button-small:hover {
+	a.button-primary:hover {
 		.button-colors-hover(@btn-primary-border-color-hover, @btn-primary-background-hover);
-		text-decoration: none;
-    outline: none;
 	}
 
-	.button:active,
-	.button-primary:active,
-	.button-small-primary:active,
 	button:active,
 	input[type="submit"]:active,
 	input[type="reset"]:active,
 	input[type="button"]:active,
-	.button-small:active,
-	.button-small-primary:active,
-	button.button-small:active,
-	input[type="submit"].button-small:active,
-	input[type="reset"].button-small:active,
-	input[type="button"].button-small:active {	
+	a.button-primary:active {
 		.button-colors-active(@btn-primary-border-color-active, @btn-primary-background-active);
-		text-decoration: none;
-    outline: none;
 	}
 
 
 	/* Secondary */
-	.button-secondary,
 	button.button-secondary,
 	input[type="submit"].button-secondary,
 	input[type="reset"].button-secondary,
-	input[type="button"].button-secondary {
-    .button-global(@btn-secondary-color, @btn-secondary-text-shadow, @btn-font-family, @btn-font-size, @btn-font-weight, @btn-margin, @btn-padding);
-		.button-colors(@btn-secondary-border-color, @btn-secondary-background);
-	}
-  .button-small-secondary,
-	button.button-small-secondary,
-	input[type="submit"].button-small-secondary,
-	input[type="reset"].button-small-secondary,
-	input[type="button"].button-small-secondary {
-    .button-global(@btn-secondary-color, @btn-secondary-text-shadow, @btn-font-family, @btn-small-font-size, @btn-small-font-weight, @btn-small-margin, @btn-small-padding);
-		.button-colors(@btn-secondary-border-color, @btn-secondary-background);
+	input[type="button"].button-secondary,
+	a.button-secondary {
+		.button-colors(@btn-secondary-color, @btn-secondary-text-shadow, @btn-secondary-border-color, @btn-secondary-background);
 	}
 
-	.button-secondary:hover,
-  .button-small-secondary:hover,
-  button.button-secondary:hover,
-  button.button-small-secondary:hover,
+  .button-secondary:hover,
 	input[type="submit"].button-secondary:hover,
-	input[type="submit"].button-small-secondary:hover,
 	input[type="reset"].button-secondary:hover,
-	input[type="reset"].button-small-secondary:hover,
 	input[type="button"].button-secondary:hover,
-	input[type="button"].button-small-secondary:hover {
+	a.button-secondary:hover {
 		.button-colors-hover(@btn-secondary-border-color-hover, @btn-secondary-background-hover);
-		text-decoration: none;
-    outline: none;
 	}
-	.button-secondary:active,
-  .button-small-secondary:active,
-	button.button-secondary:focus,
-	button.button-small-secondary:focus,
-	input[type="submit"].button-secondary:focus,
-	input[type="submit"].button-small-secondary:focus,
-	input[type="reset"].button-secondary:focus,
-	input[type="reset"].button-small-secondary:focus,
-	input[type="button"].button-secondary:focus,
-	input[type="button"].button-small-secondary:focus {
+	button.button-secondary:active,
+	input[type="submit"].button-secondary:active,
+	input[type="reset"].button-secondary:active,
+	input[type="button"].button-secondary:active,
+  a.button-secondary:active {
 		.button-colors-active(@btn-secondary-border-color-active, @btn-secondary-background-active);
-		text-decoration: none;
-    outline: none;
 	}
 
 
 	/* Info */
-	.button-info,
 	button.button-info,
 	input[type="submit"].button-info,
 	input[type="reset"].button-info,
-	input[type="button"].button-info {
-    .button-global(@btn-info-color, @btn-info-text-shadow, @btn-font-family, @btn-font-size, @btn-font-weight, @btn-margin, @btn-padding);
-		.button-colors(@btn-info-border-color, @btn-info-background);
-	}
-  .button-small-info,
-	button.button-small-info,
-	input[type="submit"].button-small-info,
-	input[type="reset"].button-small-info,
-	input[type="button"].button-small-info {
-    .button-global(@btn-info-color, @btn-info-text-shadow, @btn-font-family, @btn-small-font-size, @btn-small-font-weight, @btn-small-margin, @btn-small-padding);
-		.button-colors(@btn-info-border-color, @btn-info-background);
+	input[type="button"].button-info,
+	a.button-info {
+		.button-colors(@btn-info-color, @btn-info-text-shadow, @btn-info-border-color, @btn-info-background);
 	}
 
-	.button-info:hover,
-  .button-small-info:hover,
   button.button-info:hover,
-  button.button-small-info:hover,
 	input[type="submit"].button-info:hover,
-	input[type="submit"].button-small-info:hover,
 	input[type="reset"].button-info:hover,
-	input[type="reset"].button-small-info:hover,
 	input[type="button"].button-info:hover,
-	input[type="button"].button-small-info:hover {
+	a.button-info:hover {
 		.button-colors-hover(@btn-info-border-color-hover, @btn-info-background-hover);
-		text-decoration: none;
-    outline: none;
 	}
-	.button-info:active,
-  .button-small-info:active,
-	button.button-info:focus,
-	button.button-small-info:focus,
-	input[type="submit"].button-info:focus,
-	input[type="submit"].button-small-info:focus,
-	input[type="reset"].button-info:focus,
-	input[type="reset"].button-small-info:focus,
-	input[type="button"].button-info:focus,
-	input[type="button"].button-small-info:focus {
+
+	button.button-info:active,
+	input[type="submit"].button-info:active,
+	input[type="reset"].button-info:active,
+	input[type="button"].button-info:active,
+	a.button-info:active {
 		.button-colors-active(@btn-info-border-color-active, @btn-info-background-active);
-		text-decoration: none;
-    outline: none;
 	}
 
 
 	/* Alert */
-	.button-alert,
   button.button-alert,
 	input[type="submit"].button-alert,
 	input[type="reset"].button-alert,
-	input[type="button"].button-alert {
-    .button-global(@btn-alert-color, @btn-alert-text-shadow, @btn-font-family, @btn-font-size, @btn-font-weight, @btn-margin, @btn-padding);
-		.button-colors(@btn-alert-border-color, @btn-alert-background);
-	}
-	.button-small-alert,
-	button.button-small-alert,
-	input[type="submit"].button-small-alert,
-	input[type="reset"].button-small-alert,
-	input[type="button"].button-small-alert {
-    .button-global(@btn-alert-color, @btn-alert-text-shadow, @btn-font-family, @btn-small-font-size, @btn-small-font-weight, @btn-small-margin, @btn-small-padding);
-		.button-colors(@btn-alert-border-color, @btn-alert-background);
+	input[type="button"].button-alert,
+	a.button-alert {
+		.button-colors(@btn-alert-color, @btn-alert-text-shadow, @btn-alert-border-color, @btn-alert-background);
 	}
 
-	.button-alert:hover,
-  .button-small-alert:hover,
 	button.button-alert:hover,
-	button.button-small-alert:hover,
 	input[type="submit"].button-alert:hover,
-	input[type="submit"].button-small-alert:hover,
 	input[type="reset"].button-alert:hover,
-	input[type="reset"].button-small-alert:hover,
 	input[type="button"].button-alert:hover,
-	input[type="button"].button-small-alert:hover {
+	a.button-alert:hover {
 		.button-colors-hover(@btn-alert-border-color-hover, @btn-alert-background-hover);
-		text-decoration: none;
-    outline: none;
 	}
-	.button-alert:active,
-  .button-small-alert:active,
-  button.button-alert:focus,
-  button.button-small-alert:focus,
-	input[type="submit"].button-alert:focus,
-	input[type="submit"].button-small-alert:focus,
-	input[type="reset"].button-alert:focus,
-	input[type="reset"].button-small-alert:focus,
-	input[type="button"].button-alert:focus,
-	input[type="button"].button-small-alert:focus {
+
+  button.button-alert:active,
+	input[type="submit"].button-alert:active,
+	input[type="reset"].button-alert:active,
+	input[type="button"].button-alert:active,
+	a.button-alert:active {
 		.button-colors-active(@btn-alert-border-color-active, @btn-alert-background-active);
-		text-decoration: none;
-    outline: none;
 	}
 
 
 	/* Warning */
-	.button-warning,
   button.button-warning,
 	input[type="submit"].button-warning,
 	input[type="reset"].button-warning,
-	input[type="button"].button-warning {
-    .button-global(@btn-warning-color, @btn-warning-text-shadow, @btn-font-family, @btn-font-size, @btn-font-weight, @btn-margin, @btn-padding);
-		.button-colors(@btn-warning-border-color, @btn-warning-background);
-	}
-	.button-small-warning,
-  button.button-small-warning,
-	input[type="submit"].button-small-warning,
-	input[type="reset"].button-small-warning,
-	input[type="button"].button-small-warning {
-    .button-global(@btn-warning-color, @btn-warning-text-shadow, @btn-font-family, @btn-small-font-size, @btn-small-font-weight, @btn-small-margin, @btn-small-padding);
-		.button-colors(@btn-warning-border-color, @btn-warning-background);
+	input[type="button"].button-warning,
+	a.button-warning {
+		.button-colors(@btn-warning-color, @btn-warning-text-shadow, @btn-warning-border-color, @btn-warning-background);
 	}
 
-	.button-warning:hover,
-  .button-small-warning:hover,
   button.button-warning:hover,
-  button.button-small-warning:hover,
 	input[type="submit"].button-warning:hover,
-	input[type="submit"].button-small-warning:hover,
 	input[type="reset"].button-warning:hover,
-	input[type="reset"].button-small-warning:hover,
 	input[type="button"].button-warning:hover,
-	input[type="button"].button-small-warning:hover {
+	a.button-warning:hover {
 		.button-colors-hover(@btn-warning-border-color-hover, @btn-warning-background-hover);
-		text-decoration: none;
-    outline: none;
 	}
-	.button-warning:active,
-  .button-small-warning:active,
-  button.button-warning:focus,
-  button.button-small-warning:focus,
-	input[type="submit"].button-warning:focus,
-	input[type="submit"].button-small-warning:focus,
-	input[type="reset"].button-warning:focus,
-	input[type="reset"].button-small-warning:focus,
-	input[type="button"].button-warning:focus,
-	input[type="button"].button-small-warning:focus {
+
+  button.button-warning:active,
+	input[type="submit"].button-warning:active,
+	input[type="reset"].button-warning:active,
+	input[type="button"].button-warning:active,
+  a.button-warning:active {
 		.button-colors-active(@btn-warning-border-color-active, @btn-warning-background-active);
-		text-decoration: none;
-    outline: none;
 	}
+
 
 	/* Icons */
 	.button span,
