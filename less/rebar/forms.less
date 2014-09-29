@@ -3,8 +3,8 @@
 
   .standard {
 
-    form { margin-bottom: 20px; }
-  	fieldset { margin-bottom: 20px; }
+    form { margin-bottom: @base-margin; }
+  	fieldset { margin-bottom: @base-margin; }
   	input[type="text"],
   	input[type="password"],
   	input[type="email"],
@@ -13,62 +13,59 @@
   	input[type="address"],
   	textarea,
   	select {
-  		padding: 10px 12px;
+  		margin: @form-input-margin;
+  		padding: @form-input-padding;
   		outline: none;
-  		font-size: @form-elements-font-size;
-  		font-family: @form-elements-font-family;
-  		color: @form-elements-color;
-  		width: 210px;
+  		font-size: @form-font-size;
+  		font-family: @form-font-family;
+  		color: @form-color;
+  		width: @form-input-width;
   		max-width: 100%;
   		display: block;
-  		margin-top: 0px;
-  		margin-bottom: 20px;
-  		background: @form-elements-background;
-  		-moz-border-radius: @form-border-radius;
-  		-webkit-border-radius: @form-border-radius;
+  		background: @form-background;
   		border-radius: @form-border-radius;
   		border: @form-border-size solid @form-border-color;
-  		-webkit-box-sizing: border-box;
-  		-moz-box-sizing: border-box;
-  		box-sizing: border-box;        
+  		box-sizing: border-box;
   	}
-  	
-  	select { padding: 0; }
+
   	input[type="text"]:focus,
   	input[type="password"]:focus,
   	input[type="email"]:focus,
   	textarea:focus {
   		border: @form-border-size solid @form-border-color-focus;
-  		color: @form-elements-color-focus;
-   		-moz-box-shadow: 0 0 5px rgba(0,0,0,.2);
-  		-webkit-box-shadow: 0 0 5px rgba(0,0,0,.2);
-  		box-shadow:  0 0 5px rgba(0,0,0,.2);
+  		color: @form-color-focus;
+  		box-shadow:  0 0 5px @form-input-focus;
   	}
-  
-  	textarea { min-height: 60px; }
-  	label,
+
+  	textarea {
+      min-height: @form-textarea-height;
+    }
+
+    label,
   	legend {
   		display: block;
-  		font-weight: normal;
-  		font-size: 16px;
-  		font-style: italic;
-  		margin-bottom: 5px;
+  		font-weight: @form-label-font-weight;
+  		font-size: @form-label-font-size;
+  		font-style: @form-label-font-style;
+  		margin: @form-label-margin;
+      color: @form-label-color;
   	}
-  
+
   	select {
   		color: @form-select-color;
-  		width: 220px;
+  		width: (@form-input-width + 10px);
+  		font-size: (@form-font-size * .90);
   	}
-  
+
   	input[type="checkbox"] {
   		display: inline;
   	}
   
   	label span,
   	legend span {
-  		font-weight: normal;
-  		font-size: 14px;
-  		color: #444;
+  		font-weight: @form-label-font-weight;
+  		font-size: @form-label-font-size;
+  		color: @form-label-color;
   	}
   
   	a {
@@ -81,3 +78,63 @@
   	}
 	
   }
+
+  input[type="text"].tiny,
+	input[type="password"].tiny,
+	input[type="email"].tiny,
+	input[type="url"].tiny,
+	input[type="phone"].tiny,
+	input[type="address"].tiny,
+  textarea.tiny,
+  select.tiny {
+    width: @form-tiny;
+  }
+
+  input[type="text"].small,
+	input[type="password"].small,
+	input[type="email"].small,
+	input[type="url"].small,
+	input[type="phone"].small,
+	input[type="address"].small,
+  textarea.small,
+  select.small {
+    width: @form-small;
+  }
+
+  input[type="text"].medium,
+	input[type="password"].medium,
+	input[type="email"].medium,
+	input[type="url"].medium,
+	input[type="phone"].medium,
+	input[type="address"].medium,
+  textarea.medium,
+  select.medium {
+    width: @form-medium;
+  }
+
+  input[type="text"].large,
+	input[type="password"].large,
+	input[type="email"].large,
+	input[type="url"].large,
+	input[type="phone"].large,
+	input[type="address"].large,
+  textarea.large,
+  select.large {
+    width: @form-large;
+  }
+
+  input[type="text"].full,
+	input[type="password"].full,
+	input[type="email"].full,
+	input[type="url"].full,
+	input[type="phone"].full,
+	input[type="address"].full,
+  textarea.full,
+  select.full {
+    width: @form-full;
+  }
+
+  label.checkbox {
+    margin-bottom: @base-margin;
+  }
+

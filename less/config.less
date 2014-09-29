@@ -270,19 +270,39 @@
 
 /* Forms */
 
-	@form-elements-background: #FFFFFF;
-	@form-elements-color: #666666;
-	@form-elements-color-focus: #333333;
-	@form-elements-font-size: 18px;
-	@form-elements-font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	@form-background: #FFFFFF;
+	@form-color: #666666;
+	@form-color-focus: #333333;
+	@form-font-size: 16px;
+	@form-font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  @form-font-style: normal;
+
+  @form-label-margin: 0 0 5px 0;
+  @form-label-font-size: @form-font-size;
+  @form-label-font-style: italic;
+  @form-label-font-weight: normal;
+	@form-label-color: @black;
 
 	@form-border-size: 1px;
 	@form-border-color: #999999;
 	@form-border-radius: 4px;
 	@form-border-color-focus: #666666;
 
+  @form-input-width: 210px;
+  @form-input-margin: 0 0 @base-margin 0;
+  @form-input-padding: 10px 12px;
+  @form-input-focus: rgba(0, 0, 0,.4);
+
+  @form-textarea-height: 60px;
+
 	@form-select-color: @blue;
-	@form-label-color: @blue;
+  @form-select-padding: 15px 20px;
+
+  @form-tiny: 75px;
+  @form-small: 135px;
+  @form-medium: 350px;
+  @form-large: 500px;
+  @form-full: 100%;
 
 
 /* Tables */
