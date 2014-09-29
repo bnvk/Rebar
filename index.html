@@ -343,35 +343,40 @@
 						<li>Ordered Item</li>
 						<li>Ordered Item</li>
 					</ol>
+         <p>Add the <code>ul.none</code> class</p>
+					<ul class="none">
+					  <li>Unordered Item</li>
+						<li>Unordered Item</li>
+						<li>Unordered Item</li>
+						<li>Unordered Item</li>
+					</ul>
 				</div>
 				<div class="col-5">
-          <p>Add the <code>.square</code> class</p>
+          <p>Add the <code>ul.square</code> class</p>
 					<ul class="square">
 					  <li>Bottle Rocket</li>
 						<li>Rushmore</li>
 						<li>The Royal Tenebaums</li>
 						<li>Life Aquatic w/ Steve Zissou</li>
 					</ul>
-          <p>Add the <code>.circle</code> class</p>
+          <p>Add the <code>ul.circle</code> class</p>
 					<ul class="circle">
 						<li>Darjeeling Limited</li>
 						<li>Fantastic Mr. Fox</li>
 						<li>Moonrise Kingdom</li>
 						<li>The Grand Budapest Hotel</li>
 					</ul>
-				</div>				
-			</div>
-      <div class="row">
-				<div class="col-5">
-    			<p>Add the <code>.small</code> class to list element</p>
+    			<p>Add the <code>ul.small</code> class to list element</p>
     			<ul class="small remove-bottom">
     			  <li>Small Item</li>
     			  <li>Small Item</li>
     			  <li>Small Item</li>
     			</ul>
-				</div>
+				</div>				
+			</div>
+      <div class="row">
 				<div class="col-5">
-    			<p>Add the <code>.large</code> class to list element</p>
+    			<p>Add the <code>ul.large</code> class to list element</p>
     			<ul class="large remove-bottom">
     			  <li>Large Item</li>
     			  <li>Large Item</li>
@@ -380,7 +385,7 @@
 				</div>
       </div>
       <div class="row">
-        <p>Add the <code>.horizontal</code> class to list element</p>
+        <p>Add the <code>ul.horizontal</code> class to list element</p>
         <ul class="horizontal">
           <li class="add-right">Item #1</li>
           <li class="add-right">Item #2</li>
@@ -397,15 +402,19 @@
 			<p>Buttons are intended for action and thus should have appropriate weight. The standard button is given that weight with a little bit of depth and a strong hover.</p>
 			<div class="add-bottom">
 				<h5>Normal</h5>
-				<a href="#buttons" class="button-primary" onclick="javascript:alert('This button uses .button-primary class')">Button Primary</a>
-				<a href="#buttons" class="button-secondary" onclick="javascript:alert('This button uses .button-secondary class')">Button Secondary</a>
-				<a href="#buttons" class="button-alert" onclick="javascript:alert('This button uses .button-alert class')">Button Alert</a>
-				<a href="#buttons" class="button-warning" onclick="javascript:alert('This button uses .button-warning class')">Button Warning</a>
+				<a href="#buttons" class="button-primary" onclick="javascript:alert('This anchor uses .button-primary class')">Button Primary</a>
+				<input type="submit" class="button-secondary" onclick="javascript:alert('This input.submit uses .button-secondary class')" value="Button Secondary">
+				<input type="reset" class="button-info" onclick="javascript:alert('This input.reset .button-info class')" value="Button Info">
+				<input type="button" class="button-alert" onclick="javascript:alert('This input.button uses .button-alert class')" value="Button Alert">
+				<button href="#buttons" class="button-warning" onclick="javascript:alert('This button uses .button-warning class')">Button Warning</button>
 			</div>
 			<div class="add-bottom">			
-				<h5>With Icons</h5>
-				<a href="#buttons" class="button-primary" onclick="javascript:alert('This button uses .button-primary class')"><span class="icon-community"></span> Button Primary</a>
-				<a href="#buttons" class="button-secondary" onclick="javascript:alert('This button uses .button-secondary class')"><span class="icon-brain"></span> Button Secondary</a>
+				<h5>Small Buttons</h5>
+				<a href="#buttons" class="button-small-primary" onclick="javascript:alert('This anchor uses .button-small-primary class')">Small Primary</a>
+				<input type="submit" class="button-small-secondary" onclick="javascript:alert('This input.submit uses .button-small-secondary class')" value="Small Secondary">
+				<input type="reset" class="button-small-info" onclick="javascript:alert('This input.reset uses .button-small-info class')" value="Small Info">
+				<input type="button" class="button-small-alert" onclick="javascript:alert('This input.button uses .button-small-alert class')" value="Small Alert">
+				<button href="#buttons" class="button-small-warning" onclick="javascript:alert('This button uses .button-small-warning class')">Small Warning</button>
 			</div>
 		</div>
 		<hr>
