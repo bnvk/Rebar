@@ -1,160 +1,152 @@
 /* #Tables
 ================================================== */
 
+  table {
+    background-color: @table-background-color;
+    border-right: @table-border;
+    border-left: @table-border;
+    border-bottom: @table-border;
+  }
 
-	.full-width-table {
-	    width: 100%;
-	    margin: @base-margin 0 @base-margin-bottom 0;
+  table th,
+  table td,
+  table tfoot {
+    border-top: @table-border;
+  }
+
+  table td {
+    padding: @table-padding;
+    font-size: @table-font-size;
+    line-height: @table-line-height;
+  }
+
+	table th {
+    padding: @table-th-padding;
+    background-color: @table-th-background-color;
+    text-align: left;
+    font-style: @table-th-font-style;
+    font-size: @table-th-font-size;
+	}
+
+  table tr.foot td {
+    padding: @table-th-padding;
+    background-color: @table-th-background-color;
+    font-style: @table-th-font-style;
+    font-size: @table-th-font-size;
+  }
+
+
+/* Table - Full */
+
+	table.full {
+    width: 100%;
+	}
+
+	table.full td,
+  table.full th {
+    padding: @table-padding;
 	}
 
 
-	.full-width-table td, .full-width-table th {
-	    padding: @table-padding;
+/* Table - Rounded */
+
+	table.rounded {
+    border-radius: @table-border-radius;
 	}
 
-	.rounded {
-	    border-right: solid #ccc 1px;
-	    border-left: solid #ccc 1px;
-	    border-bottom: solid #ccc 1px;
-	    -moz-border-radius: @table-border-radius;
-	    -webkit-border-radius: @table-border-radius;
-	    border-radius: @table-border-radius;
-	}   
-
-	.rounded td, .rounded th {
-	    border-left: 1px solid #ccc;
-	    border-top: 1px solid #ccc;
-	    padding: @table-padding;
-	    text-align: left;    
+	table.rounded td:first-child,
+  table.rounded th:first-child {
+    border-left: none;
 	}
 
-	.rounded th {
-	    background-color: #dce9f9;
-	    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
-	    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
-	    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
-	    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
-	    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
-	    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
-	    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
-	    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
-	    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
-	    border-top: none;
-	    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+	table.rounded th:first-child {
+    border-radius: @table-border-radius 0 0 0;
 	}
 
-	.rounded td:first-child, .rounded th:first-child {
-	    border-left: none;
+	table.rounded th:last-child {
+    border-radius: 0 @table-border-radius 0 0;
 	}
 
-	.rounded th:first-child {
-	    -moz-border-radius: 6px 0 0 0;
-	    -webkit-border-radius: 6px 0 0 0;
-	    border-radius: 6px 0 0 0;
+	table.rounded th:only-child {
+    border-radius: @table-border-radius @table-border-radius 0 0;
 	}
 
-	.rounded th:last-child {
-	    -moz-border-radius: 0 6px 0 0;
-	    -webkit-border-radius: 0 6px 0 0;
-	    border-radius: 0 6px 0 0;
+	table.rounded tr:last-child td:first-child {
+    border-radius: 0 0 0 @table-border-radius;
 	}
 
-	.rounded th:only-child{
-	    -moz-border-radius: 6px 6px 0 0;
-	    -webkit-border-radius: 6px 6px 0 0;
-	    border-radius: 6px 6px 0 0;
+	table.rounded tr:last-child td:last-child {
+    border-radius: 0 0 @table-border-radius 0;
 	}
 
-	.rounded tr:last-child td:first-child {
-	    -moz-border-radius: 0 0 0 6px;
-	    -webkit-border-radius: 0 0 0 6px;
-	    border-radius: 0 0 0 6px;
-	}
-
-	.rounded tr:last-child td:last-child {
-	    -moz-border-radius: 0 0 6px 0;
-	    -webkit-border-radius: 0 0 6px 0;
-	    border-radius: 0 0 6px 0;
+	table.rounded tr:last-child td:only-child {
+    border-radius: 0 0 @table-border-radius @table-border-radius;
 	}
 
 
+/* Table - Zebra Striping */
 
-	/* Zebra Striping ----------------------*/
+  table.zebra {
+    border-right: @table-border;
+    border-left: @table-border;
+  }
 
-	.zebra td, .zebra th {
-	    padding: 10px;
-	    border-bottom: 1px solid #f2f2f2;    
+	table.zebra td,
+  table.zebra th {
+    padding: @table-padding;
 	}
 
-	.zebra tbody tr:nth-child(even) {
-	    background: #f5f5f5;
-	    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
-	    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
-	    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+  table.zebra tr:nth-child(odd) {
+    background-color: @table-zebra-odd-background-color;
+  }
+
+	table.zebra tbody tr:nth-child(even) {
+    background-color: @table-zebra-even-background-color;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
 	}
 
-	.zebra th {
-	    text-align: left;
-	    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
-	    background-color: #eee;
-	    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
-	    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
-	    background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
-	    background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
-	    background-image:      -o-linear-gradient(top, #f5f5f5, #eee); 
-	    background-image:         linear-gradient(top, #f5f5f5, #eee);
+	table.zebra th {
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    background-color: #eee;
+    background-image: linear-gradient(top, #f5f5f5, #eee);
 	}
 
-	.zebra th:first-child {
-	    -moz-border-radius: 6px 0 0 0;
-	    -webkit-border-radius: 6px 0 0 0;
-	    border-radius: 6px 0 0 0;  
+	table.zebra th:first-child {
+    border-radius: 6px 0 0 0;  
 	}
 
-	.zebra th:last-child {
-	    -moz-border-radius: 0 6px 0 0;
-	    -webkit-border-radius: 0 6px 0 0;
-	    border-radius: 0 6px 0 0;
+	table.zebra th:last-child {
+    border-radius: 0 6px 0 0;
 	}
 
-	.zebra th:only-child{
-	    -moz-border-radius: 6px 6px 0 0;
-	    -webkit-border-radius: 6px 6px 0 0;
-	    border-radius: 6px 6px 0 0;
+	table.zebra th:only-child {
+    border-radius: 6px 6px 0 0;
 	}
 
-	.zebra tfoot td {
-	    border-bottom: 0;
-	    border-top: 1px solid #fff;
-	    background-color: #f1f1f1;  
+	table.zebra tfoot td {
+    border-bottom: 0;
+    border-top: 1px solid #fff;
+    background-color: #f1f1f1;  
 	}
 
-	.zebra tfoot td:first-child {
-	    -moz-border-radius: 0 0 0 6px;
-	    -webkit-border-radius: 0 0 0 6px;
-	    border-radius: 0 0 0 6px;
+	table.zebra tfoot td:first-child {
+    border-radius: 0 0 0 6px;
 	}
 
-	.zebra tfoot td:last-child {
-	    -moz-border-radius: 0 0 6px 0;
-	    -webkit-border-radius: 0 0 6px 0;
-	    border-radius: 0 0 6px 0;
+	table.zebra tfoot td:last-child {
+    border-radius: 0 0 6px 0;
 	}
 
-	.zebra tfoot td:only-child{
-	    -moz-border-radius: 0 0 6px 6px;
-	    -webkit-border-radius: 0 0 6px 6px;
-	    border-radius: 0 0 6px 6px;
+	table.zebra tfoot td:only-child {
+    border-radius: 0 0 6px 6px;
 	}
 
 
-	/* Both */
+/* Table - Rouded & Zebra */
 
-	.rounded tr:hover, .zebra tr:hover {
-	    background: #fbf8e9;
-	    -o-transition: all 0.1s ease-in-out;
-	    -webkit-transition: all 0.1s ease-in-out;
-	    -moz-transition: all 0.1s ease-in-out;
-	    -ms-transition: all 0.1s ease-in-out;
-	    transition: all 0.1s ease-in-out;     
+  table tr:hover,
+	table.rounded tr:hover,
+  table.zebra tr:hover {
+    background: @table-hover-background-color;
+    transition: all 0.1s ease-in-out;     
 	} 	
