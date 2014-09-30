@@ -63,7 +63,9 @@ div.doc-section {
 
 /* --- buttons --- */
 
-#buttons a {
+#buttons a,
+#buttons input,
+#buttons button {
   margin-right: 20px;
 }
 

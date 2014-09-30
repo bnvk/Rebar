@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Your Groovy Application v0.0.0
  * Designed by You and built using Rebar by @brennannovak
  * http://yourgroovyappplication.com
@@ -21,14 +22,19 @@
 /* Lists */
 /* Separators */
 /* Buttons */
+/* Button - Primary */
+/* Button - Secondary */
+/* Button - Info */
+/* Button - Alert */
+/* Button - Warning */
 /* Forms */
+/* Validation */
 /* Tables */
 /* Grid */
 /* Boxes */
 /* Rectangles */
 /* Messages */
 /* Bower */
-@charset "UTF-8";
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license
@@ -2419,6 +2425,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: rollOut;
   animation-name: rollOut;
 }
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
 /* App */
 /* Web Style (one responsive breakpoint, use as needed) */
 /* Breakpoint - Larger than 1024 (standard browsers) */

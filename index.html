@@ -221,6 +221,10 @@
 					<div class="one-third">Third</div>					
 				</div>
 				<div class="row">
+					<div class="one-third">Third</div>					
+					<div class="two-thirds">Two Thirds</div>
+				</div>
+				<div class="row">
 					<div class="half">Half</div>					
 					<div class="half">Half</div>
 				</div>
@@ -366,32 +370,30 @@
 						<li>Moonrise Kingdom</li>
 						<li>The Grand Budapest Hotel</li>
 					</ul>
+				</div>
+        <div class="col-5">
+    			<p>Add the <code>ul.large</code> class to list element</p>
+    			<ul class="large">
+    			  <li>Large Item</li>
+    			  <li>Large Item</li>
+    			  <li>Large Item</li>
+    			</ul>
     			<p>Add the <code>ul.small</code> class to list element</p>
     			<ul class="small remove-bottom">
     			  <li>Small Item</li>
     			  <li>Small Item</li>
     			  <li>Small Item</li>
     			</ul>
-				</div>				
+        </div>				
 			</div>
-      <div class="row">
-				<div class="col-5">
-    			<p>Add the <code>ul.large</code> class to list element</p>
-    			<ul class="large remove-bottom">
-    			  <li>Large Item</li>
-    			  <li>Large Item</li>
-    			  <li>Large Item</li>
-    			</ul>
-				</div>
-      </div>
       <div class="row">
         <p>Add the <code>ul.horizontal</code> class to list element</p>
         <ul class="horizontal">
-          <li class="add-right">Item #1</li>
-          <li class="add-right">Item #2</li>
-          <li class="add-right">Item #3</li>
-          <li class="add-right">Item #4</li>
-          <li class="add-right">Item #5</li>
+          <li>Item #1</li>
+          <li>Item #2</li>
+          <li>Item #3</li>
+          <li>Item #4</li>
+          <li>Item #5</li>
         </ul>
       </div>
 		</div>
@@ -399,37 +401,54 @@
 
 		<div class="doc-section" id="buttons">
 			<h3>Buttons</h3>
-			<p>Buttons are intended for action and thus should have appropriate weight. The standard button is given that weight with a little bit of depth and a strong hover.</p>
-			<div class="add-bottom">
-				<h5>Normal</h5>
-				<a href="#buttons" class="button-primary" onclick="javascript:alert('This anchor uses .button-primary class')">Button Primary</a>
-				<input type="submit" class="button-secondary" onclick="javascript:alert('This input.submit uses .button-secondary class')" value="Button Secondary">
-				<input type="reset" class="button-info" onclick="javascript:alert('This input.reset .button-info class')" value="Button Info">
-				<input type="button" class="button-alert" onclick="javascript:alert('This input.button uses .button-alert class')" value="Button Alert">
-				<button href="#buttons" class="button-warning" onclick="javascript:alert('This button uses .button-warning class')">Button Warning</button>
+			<p>In order to make one of the following HTML element types more appealing & clickable:</p>
+      <code>a, input[type=submit] input[type=reset] input[type=button] button</code>
+      <p>All you need to do is add one of the following classes to any of the elements:</p>
+      <code>.button-primary .button-secondary .button-info .button-alert .button-warning</code>
+			<div class="add-top add-bottom">
+				<a href="#buttons" class="button-primary" onclick="javascript:alert('Add button-primary class')">Button Primary</a>
+				<input type="submit" class="button-secondary" onclick="javascript:alert('Add button-secondary class')" value="Button Secondary">
+				<input type="reset" class="button-info" onclick="javascript:alert('Add button-info class')" value="Button Info">
+				<input type="button" class="button-alert" onclick="javascript:alert('Add button-alert class')" value="Button Alert">
+				<button href="#buttons" class="button-warning" onclick="javascript:alert('Add button-warning class')">Button Warning</button>
 			</div>
-			<div class="add-bottom">			
+
+
+			<div class="add-top add-bottom">			
 				<h5>Small Buttons</h5>
-				<a href="#buttons" class="button-small-primary" onclick="javascript:alert('This anchor uses .button-small-primary class')">Small Primary</a>
-				<input type="submit" class="button-small-secondary" onclick="javascript:alert('This input.submit uses .button-small-secondary class')" value="Small Secondary">
-				<input type="reset" class="button-small-info" onclick="javascript:alert('This input.reset uses .button-small-info class')" value="Small Info">
-				<input type="button" class="button-small-alert" onclick="javascript:alert('This input.button uses .button-small-alert class')" value="Small Alert">
-				<button href="#buttons" class="button-small-warning" onclick="javascript:alert('This button uses .button-small-warning class')">Small Warning</button>
+        <p>To make a button small, simply add the <code>.button-small</code> as well as the above class to a given element</p>
+				<a href="#buttons" class="button-primary button-small" onclick="javascript:alert('Add button-primary button-small class')">Small Primary</a>
+				<input type="submit" class="button-secondary button-small" onclick="javascript:alert('Add button-secondary button-small class')" value="Small Secondary">
+				<input type="reset" class="button-info button-small" onclick="javascript:alert('Add button-info button-small class')" value="Small Info">
+				<input type="button" class="button-alert button-small" onclick="javascript:alert('Add button-alert button-small class')" value="Small Alert">
+				<button href="#buttons" class="button-warning button-small" onclick="javascript:alert('Add button-warning button-small class')">Small Warning</button>
 			</div>
 		</div>
 		<hr>
 
 		<div class="doc-section" id="forms">
 			<h3>Forms</h3>
-			<p>Forms can be one of the biggest pains for web developers, but just use these dead simple styles and you should be good to go.</p>
+			<p>In order to nicely style form elements, add the <code>.standard</code> class to a <code>form</code> element. You can also add the <code>.tiny .small .medium .large .full</code> class to any of the following elements <code>input textarea select</code> to alter the size.</p>
 			<div class="row">
-				<form class="col-4 standard">
-					<label for="regularInput">Regular Input</label>
-					<input type="text" id="regularInput" placeholder="Placeholder">
-					<label for="regularTextarea">Regular Textarea</label>
-					<textarea id="regularTextarea" placeholder="Placeholder text..."></textarea>
-					<label for="selectList">Select List</label>
-					<select id="selectList">
+				<form class="col-10 standard">
+					<label for="tiny-input">Tiny Input</label>
+					<input type="text" id="tiny-input" placeholder=".tiny" class="tiny">
+					<label for="small-input">Small Input</label>
+					<input type="text" id="small-input" placeholder="Add .small" class="small">
+					<label for="regular-input">Regular Input (default size)</label>
+					<input type="text" id="regular-input" placeholder="Default">
+					<label for="medium-input">Medium Input</label>
+					<input type="text" id="medium-input" placeholder="Add .medium class" class="medium">
+					<label for="large-input">Large Input</label>
+					<input type="text" id="large-input" placeholder="Add .large class" class="large">
+					<label for="full-input">Full Input</label>
+					<input type="text" id="full-input" placeholder="Add .full class" class="full">
+					<label for="regular-textarea">Regular Textarea</label>
+					<textarea id="regular-textarea" placeholder="Default"></textarea>
+          <label for="full-textarea">Full Textarea</label>
+					<textarea id="full-textarea" placeholder="Add .full class" class="full"></textarea>
+					<label for="select-list">Select List</label>
+					<select id="select-list">
 						<option value="Option 1">Option 1</option>
 						<option value="Option 2">Option 2</option>
 						<option value="Option 3">Option 3</option>
@@ -437,52 +456,86 @@
 					</select>
 					<fieldset>
 						<legend>Checkboxes</legend>
-						<label for="regularCheckbox">
-							<input type="checkbox" id="regularCheckbox" value="checkbox 1">
+						<label for="regular-checkbox">
+							<input type="checkbox" id="regular-checkbox" value="checkbox 1">
 							<span>Regular Checkbox</span>
 						</label>
-						<label for="secondRegularCheckbox">
-							<input type="checkbox" id="secondRegularCheckbox" value="checkbox 2">
+						<label for="second-regular-checkbox">
+							<input type="checkbox" id="second-regular-checkbox" value="checkbox 2">
 							<span>Regular Checkbox</span>
 						</label>
 					</fieldset>
 					<fieldset>
 						<legend>Radio Buttons</legend>
-						<label for="regularRadio">
-							<input type="radio" name="radios" id="regularRadio" value="radio 1">
+						<label for="regular-radio">
+							<input type="radio" name="radios" id="regular-radio" value="radio 1">
 							<span>Regular Radio</span>
 						</label>
-						<label for="secondRegularRadio">
-							<input type="radio" name="radios" id="secondRegularRadio" value="radio 2">
+						<label for="second-regular-radio">
+							<input type="radio" name="radios" id="second-regular-radio" value="radio 2">
 							<span>Regular Radio</span>
 						</label>
 					</fieldset>
-					<button type="submit">Submit Form</button>
+					<button class="button-primary">Submit Form</button>
 				</form>
 			</div>
+      <div class="row">
+        <h4>Validation</h4>
+        <p>You can add form validation UI feedback by adding the following classes <code>.validation-success .validation-warning .validation-error</code> to <code>label</code> element and it will style children elements <code>input select textarea</code> elements.</p>
+      </div>
 		</div>
 		<hr>
-		
-		
+
 		<div id="tables">
 			<h3>Tables</h3>
-			<table border="0" cellpadding="0" cellspacing="0" class="full-width-table rounded add-bottom">
-			<tr>
-				<td>Time</td>
-				<td>An easy way to contact groups of people & organize their responses</td>
-				<td>123</td>
-			</tr>
-			<tr>
-				<td>Cash</td>
-				<td>An easy way to contact groups of people & organize their responses</td>
-				<td>456</td>
-			</tr>
-			<tr>
-				<td>Patience</td>
-				<td>An easy way to contact groups of people & organize their responses</td>
-				<td>789</td>
-			</tr>			
-			</table>
+      <div class="row">
+        <p>Apply the <code>.rounded</code> class to the <code>table</code> element</p>
+  			<table border="0" cellpadding="0" cellspacing="0" class="rounded add-bottom">
+        <tr>
+          <th>Moral</th>
+          <th>Description</th>
+          <th>Count</th>
+        </tr>
+  			<tr>
+  				<td>Time</td>
+  				<td>An easy way to contact groups of people & organize their responses</td>
+  				<td>123</td>
+  			</tr>
+  			<tr>
+  				<td>Cash</td>
+  				<td>An easy way to contact groups of people & organize their responses</td>
+  				<td>456</td>
+  			</tr>
+  			<tr>
+  				<td>Patience</td>
+  				<td>An easy way to contact groups of people & organize their responses</td>
+  				<td>789</td>
+  			</tr>
+        <tr class="foot">
+          <td colspan="3">Thank you for reading :)</td>
+        </tr>
+  			</table>
+      </div>
+      <div class="row">
+        <p>This table has the <code>.zebra</code> and <code>.full</code> class on the <code>table</code> element [UNFINISHED]</p>
+  			<table border="0" cellpadding="0" cellspacing="0" class="full zebra add-bottom">
+  			<tr>
+  				<td>Time</td>
+  				<td>An easy way to contact groups of people & organize their responses</td>
+  				<td>123</td>
+  			</tr>
+  			<tr>
+  				<td>Cash</td>
+  				<td>An easy way to contact groups of people & organize their responses</td>
+  				<td>456</td>
+  			</tr>
+  			<tr>
+  				<td>Patience</td>
+  				<td>An easy way to contact groups of people & organize their responses</td>
+  				<td>789</td>
+  			</tr>
+  			</table>
+      </div>
 		</div>
 		<hr>
 
