@@ -259,7 +259,6 @@ input[type="button"]:hover,
 a.button-primary:hover {
   border-color: #065476;
   background-color: #0976a7;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 button:active,
 input[type="submit"]:active,
@@ -292,7 +291,6 @@ input[type="button"].button-secondary:hover,
 a.button-secondary:hover {
   border-color: #045736;
   background-color: #066f45;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-secondary:active,
 input[type="submit"].button-secondary:active,
@@ -325,7 +323,6 @@ input[type="button"].button-info:hover,
 a.button-info:hover {
   border-color: #9aa5b2;
   background-color: #d9d9d9;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-info:active,
 input[type="submit"].button-info:active,
@@ -358,7 +355,6 @@ input[type="button"].button-alert:hover,
 a.button-alert:hover {
   border-color: #a65f00;
   background-color: #ca7400;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-alert:active,
 input[type="submit"].button-alert:active,
@@ -391,7 +387,6 @@ input[type="button"].button-warning:hover,
 a.button-warning:hover {
   border-color: #840404;
   background-color: #920505;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-warning:active,
 input[type="submit"].button-warning:active,
@@ -548,7 +543,7 @@ input::-moz-focus-inner {
 .standard input[type="address"],
 .standard textarea,
 .standard select {
-  margin: 0 0 20px 0;
+  margin-bottom: 20px;
   padding: 10px 12px;
   outline: none;
   font-size: 16px;

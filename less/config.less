@@ -188,7 +188,6 @@
   .button-colors-hover(@border-color, @background) {
     border-color: @border-color;
     background-color: @background;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 	}
 
   .button-colors-active(@border-color, @background) {
@@ -291,7 +290,7 @@
 	@form-border-color-focus: #666666;
 
   @form-input-width: 210px;
-  @form-input-margin: 0 0 @base-margin 0;
+  @form-input-margin-bottom: @base-margin;
   @form-input-padding: 10px 12px;
   @form-input-focus: rgba(0, 0, 0,.4);
 
