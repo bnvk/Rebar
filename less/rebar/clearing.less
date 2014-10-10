@@ -19,42 +19,44 @@
 
 /* Vertical Margins & Padding */
 
-  .remove-top		  { margin-top: 0 !important; }
-  .half-top		    { margin-top: (@base-margin / 2) !important; }
-  .add-top		    { margin-top: @base-margin !important; }
-  .double-top		  { margin-top: (@base-margin * 2) !important; }
+  .remove-top       { margin-top: 0 !important; }
+  .half-top         { margin-top: (@base-margin / 2) !important; }
+  .add-top		      { margin-top: @base-margin !important; }
+  .double-top		    { margin-top: (@base-margin * 2) !important; }
 
-  .remove-bottom	{ margin-bottom: 0 !important; }
-  .half-bottom	  { margin-bottom: (@base-margin / 2) !important; }
-  .add-bottom		  { margin-bottom: @base-margin !important; }
-  .double-bottom  { margin-top: (@base-margin * 2) !important; }
+  .remove-bottom	  { margin-bottom: 0 !important; }
+  .half-bottom	    { margin-bottom: (@base-margin / 2) !important; }
+  .add-bottom       { margin-bottom: @base-margin !important; }
+  .double-bottom    { margin-top: (@base-margin * 2) !important; }
+
+  .remove-right     { margin-right: 0px !important; }
+  .add-right        { margin-right: @base-margin !important; }
+  .add-right-half   { margin-right: (@base-margin / 2) !important; }
+  .add-right-double { margin-left: (@base-margin * 2) !important; }
+
+  .remove-left      { margin-left: 0px !important; }
+  .add-left         { margin-left: @base-margin !important; }
+  .add-left-half    { margin-left: (@base-margin / 2) !important; }
+  .add-left-double  { margin-left: (@base-margin * 2) !important; }
+
 
 /* Centering */
 
-  .left			  { float: left; }
-  .center			{ margin-left: auto; margin-right: auto; }
-  .right			{ float: right; }
+  .left         { float: left; }
+  .center       { margin-left: auto !important; margin-right: auto !important; }
+  .right			  { float: right; }
+  .vertical     { vertical-align: middle !important; }
+
+  .text-left		{ text-align: left !important; }
+  .text-center	{ text-align: center !important; }
+  .text-right 	{ text-align: right !important; }
   
-  .verticle-middle{ display: inline-table !important; vertical-align: middle; }
-  
-  .text-left		{ text-align: left; }
-  .text-center	{ text-align: center; }
-  .text-right 	{ text-align: right; }
 
-  .middle { vertical-align: middle; }
-
-  .remove-right   { margin-right: 0px; }
-  .add-right      { margin-right: @base-margin; }
-  .add-right-half { margin-right: (@base-margin / 2); }
-  .add-right-double{ margin-left: (@base-margin * 2); }
-
-  .remove-left    { margin-left: 0px; }
-  .add-left       { margin-left: @base-margin; }
-  .add-left-half  { margin-left: (@base-margin / 2); }
-  .add-left-double{ margin-left: (@base-margin * 2); }
-
-
-/* Hide */
+/* Display */
 
   .hide			    { display: none; }
+  .block        { display: block !important; }
+  .inline-block { display: inline-block !important; }
+  .table        { display: table !important; }
+  .table-cell   { display: table-cell !important; }
 
