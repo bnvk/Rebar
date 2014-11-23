@@ -53,13 +53,17 @@
 
 /* Pre & Code */
 
-  code,
+  pre {
+    word-wrap: normal;
+    display: block;
+    padding: @pre-padding;
+  }
+
   pre,
   .pre {
     margin-bottom: @pre-margin-bottom;
     background: @pre-background;
     color: @pre-color;
-    padding: @pre-padding;
     border: @pre-border;
     border-radius: @pre-border-radius;
     font-family: @pre-font-family;
@@ -67,7 +71,40 @@
     font-weight: @pre-font-weight;
   }
 
-  code,
-  pre {
-    display: inline-block;
+  code {
+    display: inline;
+    border: @pre-border;
+    border-radius: @pre-border-radius;
+    background: @pre-background;
+    padding: @code-padding;
+    font-family: @code-font-family;
+    font-size: 70%;
+    font-weight: @code-font-weight;
+  }
+
+  pre code {
+    border: 0px;
+    font-size: 100%;
+  }
+
+
+/* Special Classes */
+
+  .text-detail {
+    color: @gray;
+  }
+
+  a.link-detail,
+  a.link-detail:visited {
+    color: @gray;
+    font-weight: normal !important;
+  }
+
+  a.link-detail:hover {
+    color: @grayDark;
+  }
+
+  a.disabled {
+    pointer-events: none;
+    cursor: default;
   }

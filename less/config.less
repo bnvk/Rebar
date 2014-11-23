@@ -7,7 +7,7 @@
 	@white: #FFFFFF;
 	@black: #333333;
 	@gray: #b7bfc8;
-	@grayLight: #E6E6E6;
+	@grayLight: #E9E9E9;
 	@grayDark: #656E77;
 	@blue: #0A87BF;	
 	@brown: #826f69;
@@ -54,7 +54,7 @@
 	@text-color: #333333;
 	@text-color-light: #999999;
 
-	@em-font-style: @text-font-family-italic;
+	@em-font-style: italic;
 
 	@strong-font-family: @text-font-family-bold;
 	@strong-font-weight: normal;
@@ -66,13 +66,17 @@
 	@pre-margin-bottom: 20px;
 	@pre-background: @grayLight;
   @pre-color: @black;
-  @pre-padding: 2px 6px;
+  @pre-padding: 10px 15px;
   @pre-border: 1px solid @gray;
   @pre-border-radius: 3px;
-  @pre-font-family: 'Courier';
+  @pre-font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   @pre-font-size: 14px;
-  @pre-font-weight: bold;
+  @pre-font-weight: normal;
 
+  @code-font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  @code-font-size: 14px;
+  @code-font-weight: normal;
+  @code-padding: 2px 5px;
 
 /* Links */
 	
@@ -184,7 +188,7 @@
     background: @background;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 0px 0px rgba(0, 0, 0, 0.2);
   }
-  
+
   .button-colors-hover(@border-color, @background) {
     border-color: @border-color;
     background-color: @background;
@@ -197,9 +201,9 @@
   }
 
   @btn-color: @white;
-  @btn-font-family: @text-font-family-semibold;
+  @btn-font-family: @text-font-family-bold;
   @btn-font-size: 16px;
-  @btn-font-weight: bold;
+  @btn-font-weight: normal;
   @btn-margin: 0px;
   @btn-padding: 5px 15px;
 
