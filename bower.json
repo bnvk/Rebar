@@ -33,6 +33,6 @@
   ],
   "dependencies": {
     "animate.css": "~3.1.0",
-    "less-elements": "master"
+    "less-elements-old": "~1.0.0"
   }
 }
