@@ -1,10 +1,11 @@
 {
   "name": "Rebar",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "homepage": "https://brennannovak.com/work/rebar",
   "authors": [
     "Brennan Novak https://brennannovak.com",
-    "Edward Hotchkiss http://github.com/edwardhotchkiss"
+    "Edward Hotchkiss http://github.com/edwardhotchkiss",
+	"Jocelyn Delalande http://jocelyn.delalande.fr"
   ],
   "description": "A lightweight HTML5 / CSS3 framework for making responsive websites, built using the LESS preprocessor",
   "main": "index.html",
