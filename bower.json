@@ -5,6 +5,7 @@
   "authors": [
     "Brennan Novak https://brennannovak.com",
     "Edward Hotchkiss http://github.com/edwardhotchkiss",
+	"Alexandre Viau http://www.alexandreviau.net",
 	"Jocelyn Delalande http://jocelyn.delalande.fr"
   ],
   "description": "A lightweight HTML5 / CSS3 framework for making responsive websites, built using the LESS preprocessor",
